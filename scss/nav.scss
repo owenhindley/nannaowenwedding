@@ -1,0 +1,55 @@
+
+main article, section {
+    display: none;	
+}
+
+// main > section > h6 { display: none; }
+// main.all, main.recent {
+//     > section > h6 {
+//         display: block;
+//     }
+// }
+
+
+main.all {
+    .collaboration, .performance, .recent, .works, .talks{
+        display: block;
+    }    
+}
+main.recent {
+    > section:not(.about) {
+        display: block;
+        .recent{
+            display: block;
+        }
+    }
+        
+}
+
+main.collaboration {
+    .collaboration{
+        display: block;
+    }    
+}
+
+main.works {
+    .works, .performance{
+        display: block;
+    }    
+}
+
+main.talks {
+    .talks{
+        display: block;
+    }    
+}
+
+main.about {
+    .about{
+        display: block;
+    }    
+}
+
+
+
+
