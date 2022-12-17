@@ -1,0 +1,95 @@
+@import './colours.scss';
+
+section {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    border-radius: $borderRadius;
+
+    background-color: transparent;
+    p {
+        color: darken($textColor, 50);
+    }
+
+    &:nth-of-type(2) {
+        background-color: $c1;
+        header {
+            background-color: $c2;
+        }
+    }
+    &:nth-of-type(3) {
+        background-color: $c3;
+        header {
+            background-color: $c4;
+        }
+    }
+    &:nth-of-type(4) {
+        background-color: $c4;
+        header {
+            background-color: $c1;
+        }
+    }
+    &:nth-of-type(5) {
+        background-color: $c3;
+        header {
+            background-color: $c4;
+        }
+    }
+    &:nth-of-type(6) {
+        background-color: $c2;
+        header {
+            background-color: $c3;
+        }
+    }
+    header {
+        width: auto;
+        padding: 0.2em 0.2em 0.1em 0.2em;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: bold;
+        overflow: hidden;
+        display: block;
+    }
+
+    article {
+        width: 100%;
+        float: left;
+    }
+
+    button {
+        border-radius: $borderRadius;
+        padding: 1em;
+        font-size: 1rem;
+        background-color: $c3;
+        border: none;
+        cursor: pointer;
+        transition: background-color, transform 0.2s, 0.2s;
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: lighten($c3, 50);
+        }
+    }
+
+    // what where when
+    .www {
+        header {
+            font-size: 3rem;
+            text-align: center;
+            background-color: $c3;
+            margin: 0.5em;
+        }
+        p {
+            height: 12rem;
+            margin: 0.5em;
+        }
+        width: 33%;
+        overflow: visible;
+        float: left;
+
+        text-align: center;
+        background-color: $c2;
+        padding-bottom: 1em;
+    }
+}

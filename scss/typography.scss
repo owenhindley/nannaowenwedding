@@ -5,7 +5,6 @@
 // @import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 
-
 // @font-face {
 //     font-family: 'vtf_victoriannaitalic';
 //     src: url('../fonts/vtf_victorianna_thin_talic-webfont.eot');
@@ -17,9 +16,6 @@
 //     font-style: normal;
 
 // }
-
-
-
 
 // @font-face {
 //     font-family: 'vtf_victoriannathin';
@@ -49,29 +45,32 @@
 // 	font-style: normal;
 // }
 
-
-h1, h2, h3, h4 {
-	font-family: "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: normal;
-	letter-spacing: -0.02em;
-	// text-shadow: $highlightColor 0px -1px 2px;
-	text-shadow: 0px 1px 2px $highlightColor;
-   
-  }
-
+h1,
+h2,
+h3,
+h4,
+header {
+    font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial,
+        sans-serif;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+    // text-shadow: $highlightColor 0px -1px 2px;
+    // text-shadow: 0px 1px 2px $highlightColor;
+}
 
 h5,
 h6 {
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: normal;
-	letter-spacing: 0.02em;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial,
+        sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.02em;
 }
 
 h6 {
-	font-family: "Open Sans", Verdana, Geneva, sans-serif;
-	font-weight: lighter;
-	letter-spacing: 0.05em;
-	font-size: 80%;
+    font-family: 'Open Sans', Verdana, Geneva, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 0.05em;
+    font-size: 80%;
 }
 
 h1,
@@ -80,52 +79,54 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0px;
-	padding: 0px;
-	display: block;
-	line-height: 1.1em;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    line-height: 1.1em;
 }
 
 h1 {
-	font-size: 64px;
+    font-size: 64px;
 }
 
 h2 {
-	font-size: 64px;
-	clear: none;
+    font-size: 64px;
+    clear: none;
 }
 
 h3 {
-	font-size: 42px;
+    font-size: 42px;
 }
 
 h4 {
-	font-size: 32px;
+    font-size: 32px;
 }
 
 h5 {
-	font-size: 24px;
+    font-size: 24px;
 }
 
 h6 {
-	margin-bottom: 3px;
-	font-size: 16px;
-	line-height: 1.25em;
-	margin-top: 1px;
-	font-weight: bold;
+    margin-bottom: 3px;
+    font-size: 16px;
+    line-height: 1.25em;
+    margin-top: 1px;
+    font-weight: bold;
 }
 
 a {
-	color: #a0a0a0;
-	text-decoration: none;
+    color: lighten($textColor, 30);
+    text-decoration: none;
 
-	&:hover {
-		border-bottom: 1px solid #6d6d6d;
-	}
+    &:hover {
+        border-bottom: 1px solid #6d6d6d;
+    }
 }
 
-p, li, ul {
-	line-height: 1.5em;
-	font-size: 1.1em;
-	color:#8a8989;
+p,
+li,
+ul {
+    line-height: 1.5em;
+    font-size: 1.1em;
+    color: darken($textColor, 20);
 }

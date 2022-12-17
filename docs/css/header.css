@@ -1,0 +1,43 @@
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in Hex */
+.c0 {
+  color: #bf7582; }
+
+.c1 {
+  color: #d99e6a; }
+
+.c2 {
+  color: #58846e; }
+
+.c3 {
+  color: #f2d194; }
+
+.c4 {
+  color: #f2f2f2; }
+
+@keyframes colourCycle {
+  0% {
+    color: #bf7582; }
+  50% {
+    color: #d99e6a; }
+  100% {
+    color: #bf7582; } }
+
+body .container > header {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  color: #f2d194;
+  font-weight: bold;
+  text-shadow: 0px 0px 6px #d99e6a; }
+  body .container > header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 8rem; }
+  body .container > header h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem; }
+  body .container > header aside {
+    position: absolute;
+    right: 0;
+    text-align: right; }

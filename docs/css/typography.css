@@ -2,42 +2,45 @@
 /* Color Theme Swatches in Hex */
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
 .c0 {
-  color: #BF7582; }
+  color: #bf7582; }
 
 .c1 {
-  color: #3B82BF; }
+  color: #d99e6a; }
 
 .c2 {
-  color: #F2D194; }
+  color: #58846e; }
 
 .c3 {
-  color: #D99E6A; }
+  color: #f2d194; }
 
 .c4 {
-  color: #F2F2F2; }
+  color: #f2f2f2; }
 
 @keyframes colourCycle {
   0% {
-    color: #BF7582; }
+    color: #bf7582; }
   50% {
-    color: #3B82BF; }
+    color: #d99e6a; }
   100% {
-    color: #BF7582; } }
+    color: #bf7582; } }
 
-h1, h2, h3, h4 {
-  font-family: "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+header {
+  font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
-  letter-spacing: -0.02em;
-  text-shadow: 0px 1px 2px #c2c2c2; }
+  letter-spacing: -0.02em; }
 
 h5,
 h6 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   letter-spacing: 0.02em; }
 
 h6 {
-  font-family: "Open Sans", Verdana, Geneva, sans-serif;
+  font-family: 'Open Sans', Verdana, Geneva, sans-serif;
   font-weight: lighter;
   letter-spacing: 0.05em;
   font-size: 80%; }
@@ -77,12 +80,14 @@ h6 {
   font-weight: bold; }
 
 a {
-  color: #a0a0a0;
+  color: #717171;
   text-decoration: none; }
   a:hover {
     border-bottom: 1px solid #6d6d6d; }
 
-p, li, ul {
+p,
+li,
+ul {
   line-height: 1.5em;
   font-size: 1.1em;
-  color: #8a8989; }
+  color: black; }

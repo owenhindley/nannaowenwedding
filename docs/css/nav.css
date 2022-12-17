@@ -1,22 +1,71 @@
-main article, section {
-  display: none; }
+/* Color Theme Swatches in RGBA */
+/* Color Theme Swatches in Hex */
+.c0 {
+  color: #bf7582; }
 
-main.all .collaboration, main.all .performance, main.all .recent, main.all .works, main.all .talks {
-  display: block; }
+.c1 {
+  color: #d99e6a; }
 
-main.recent > section:not(.about) {
-  display: block; }
-  main.recent > section:not(.about) .recent {
-    display: block; }
+.c2 {
+  color: #58846e; }
 
-main.collaboration .collaboration {
-  display: block; }
+.c3 {
+  color: #f2d194; }
 
-main.works .works, main.works .performance {
-  display: block; }
+.c4 {
+  color: #f2f2f2; }
 
-main.talks .talks {
-  display: block; }
+@keyframes colourCycle {
+  0% {
+    color: #bf7582; }
+  50% {
+    color: #d99e6a; }
+  100% {
+    color: #bf7582; } }
 
-main.about .about {
-  display: block; }
+nav {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  text-align: center; }
+  nav label {
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
+    height: 4em;
+    display: inline-block; }
+    nav label span {
+      cursor: pointer;
+      padding: 0.3em;
+      padding-bottom: 0.1em;
+      border-radius: 0.1em;
+      color: black;
+      font-family: 'Josefin Sans';
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 44px;
+      cursor: pointer;
+      transition: transform 0.2s; }
+      nav label span:hover {
+        transform: scale(1.1); }
+    nav label:nth-of-type(4n) span {
+      background-color: #bf7582; }
+    nav label:nth-of-type(4n + 1) span {
+      background-color: #d99e6a; }
+    nav label:nth-of-type(4n + 2) span {
+      background-color: #58846e; }
+    nav label:nth-of-type(4n + 3) span {
+      background-color: #f2d194; }
+    nav label input {
+      appearance: none;
+      margin-left: -1em; }
+    nav label input:checked + span {
+      border-bottom: 2px solid white; }
+  @media (max-width: 1024px) {
+    nav {
+      text-align: center; }
+      nav label {
+        height: 3em;
+        margin-left: auto;
+        margin-right: auto; }
+        nav label span {
+          font-size: 24px; } }

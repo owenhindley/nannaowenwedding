@@ -58,6 +58,8 @@
 
     <video id="splashVideo" muted="" loop="" autoplay="" data-src="images/video/test-header-video" class="visible">
         <source src="images/video/temp-wedding-header-video.mp4">
+        <source src="images/video/temp-wedding-header-video.webm">
+        <source src="images/video/temp-wedding-header-video.m4v">
     </video>
     <div id="video-overlay"></div>
 
@@ -65,186 +67,111 @@
   
 
     <header>
-        <!-- <h1>Owen Hindley</h1> -->
-
-        <!-- <div class="slideshow">
-            <img src="./images/projects/ih-lnoae-03_looping.gif"/>
-        </div> -->
        
-        <!-- <h1>O</h1> -->
-        <aside>
+       
+        <!-- <aside>
                 <p>25th - 27th August 2023<br/>
                 Þórsmörk, South Iceland</p>
                 
             </h6>    
-        </aside>
-        <h1>Nanna &amp; Owen</h1>
-        <p>Nanna and Owen are getting married! And we want to celebrate it with you, in one of our favourite places on earth.</p>          
+        </aside> -->
+        <h1>Nanna &amp; Owen</h1>        
+        <h3>Are getting married</h3>
     </header>
 
 
-    <nav>
-        <label onclick="OnNavChange('all')">
-            <input type="radio" name="nav" id="check-all" checked></input>
-            <span>All</span>
+    <nav>       
+        <label onclick="OnNavChange('location')">
+            <input type="radio" name="nav" id="check-location"></input>
+            <span>Location</span>
         </label>	
-        <label onclick="OnNavChange('recent')">
-            <input type="radio" name="nav" id="check-recent"></input>
-            <span>Recent</span>
-        </label>	
-        <label onclick="OnNavChange('works')">
-            <input type="radio" name="nav" id="check-works"></input>
-            <span>Works&nbsp;&amp;&nbsp;Performances</span>
+        <label onclick="OnNavChange('travel')">
+            <input type="radio" name="nav" id="check-travel"></input>
+            <span>Getting There</span>
         </label>		
-        <label onclick="OnNavChange('collaboration')">
-            <input type="radio" name="nav" id="check-collaboration"></input>
-            <span>Collaborations&nbsp;&amp;&nbsp;Commercial</span>
+        <label onclick="OnNavChange('what-to-bring')">
+            <input type="radio" name="nav" id="check-what-to-bring"></input>
+            <span>What To Bring</span>
         </label>
        		
-        <label onclick="OnNavChange('talks')">
-            <input type="radio" name="nav" id="check-talks"></input>
-            <span>Talks&nbsp;&amp;&nbsp;Education</span>
+        <label onclick="OnNavChange('schedule')">
+            <input type="radio" name="nav" id="check-schedule"></input>
+            <span>Schedule</span>
         </label>	
-        <label onclick="OnNavChange('about')">
-            <input type="radio" name="nav" id="check-about"></input>
-            <span>About</span>
+        <label onclick="OnNavChange('faq')">
+            <input type="radio" name="nav" id="check-faq"></input>
+            <span>FAQ</span>
         </label>		
     </nav>
 
     <main class="all">
 
-        {% assign works = collections.article | where : "data.class", "works" | sort: 'data.endDate' | reverse %}
-        {% assign performances = collections.article | where : "data.class", "performance" | sort: 'data.endDate' | reverse %}
-        {% assign collaboration = collections.article | where : "data.class", "collaboration" | sort: 'data.endDate' | reverse %}
-        {% assign talks = collections.article | where : "data.class", "talks" | sort: 'data.endDate' | reverse  %}        
+        {% assign about = collections.about | sort: 'data.order'  %}
+        {% assign location = collections.location | sort: 'data.order'  %}
+        {% assign accommodation = collections.accommodation | sort: 'data.order'  %}
+        {% assign travel = collections.travel | sort: 'data.order'  %}
+        {% assign whatToBring = collections.whatToBring | sort: 'data.order'  %}
+        {% assign schedule = collections.schedule | sort: 'data.order'  %}
 
-        <section class="works">
-            <h6>Works &amp; Performances</h6>
-            {% for article in works %}
-            <article id="{{article.data.id}}" class="{{article.data.class}} {% if article.data.recent %}recent{%endif%}">
-                <input class="showContent" type="checkbox"></input>
-                <header>
-                    <h4>{{article.data.title}}</h4>
-                    <summary>{{article.data.summary}}</summary>
-                    <ol>
-                        <li>{{article.data.when}}</li>
-                        <li>{{article.data.role}}</li>
-                        <li>{{article.data.skills}}</li>
-                    </ol>
-                </header>
-                    {{ article.templateContent }}
+        <section class="about">            
+            {%- for article in about -%}            
+            <article id="{{article.data.id}}"  class="about">                
+                {{ article.templateContent}}
             </article>
-            {% endfor %}
-
-            <!-- <h6>Performances</h6>
-            {% for article in performances %}
-            <article id="{{article.data.id}}" class="{{article.data.class}} {% if article.data.recent %}recent{%endif%}">
-                <input class="showContent" type="checkbox"></input>
-                <header>
-                    <h3>{{article.data.title}}</h3>
-                    <summary>{{article.data.summary}}</summary>
-                    <ol>
-                        <li>{{article.data.when}}</li>
-                        <li>{{article.data.role}}</li>
-                        <li>{{article.data.skills}}</li>
-                    </ol>
-                </header>
-                    {{ article.templateContent }}
-            </article>
-            {% endfor %} -->
-
+            {%- endfor -%}
         </section>
 
-        <section class="collaboration">
-            <h6>Collaborations &amp; Commercial</h6>
-            {% for article in collaboration %}
-            <article id="{{article.data.id}}" class="{{article.data.class}} {% if article.data.recent %}recent{%endif%}">
-                <input class="showContent" type="checkbox"></input>
-                <header>
-                    <h4>{{article.data.title}}</h4>
-                    <summary>{{article.data.summary}}</summary>
-                    <ol>
-                        <li>{{article.data.when}}</li>
-                        <li>{{article.data.role}}</li>
-                        <li>{{article.data.skills}}</li>
-                    </ol>
-                </header>
-                    {{ article.templateContent }}
+        <section>            
+            {%- for article in location -%}            
+            <article id="{{article.data.id}}" class="location">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
             </article>
-            {% endfor %}
+            {%- endfor -%}
         </section>
 
-        <section class="talks">
-            <h6>Talks &amp; Education</h6>
-            {% for article in talks %}
-            <article id="{{article.data.id}}" class="{{article.data.class}} {% if article.data.recent %}recent{%endif%}">                
-                <header>
-                    <h6>{{article.data.title}}</h6>
-                    <summary>{{article.data.summary}}</summary>
-                    <ol>
-                        <li>{{article.data.endDate}}</li>                       
-                        <li>{{article.data.where}}</li>
-                    </ol>
-                </header>
-                    {{ article.templateContent }}
+        <section>           
+            {%- for article in travel -%}            
+            <article id="{{article.data.id}}" class="travel">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
             </article>
-            {% endfor %}
+            {%- endfor -%}
+        </section>
+        <section>           
+            {%- for article in accommodation -%}            
+            <article id="{{article.data.id}}" class="accommodation">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
         </section>
 
-        <section class="about">
-            <h6>About &amp; Bio</h6>
-            <article>
-                <p>Owen (he/him) is a collaborative digital artist, working with software, sound, and electronics for the web, VR, performances, devices and installations.</p>
-                <p>His commercial work has included serving as technical lead on large, cutting-edge projects for clients such as Oculus Studios, Google, Microsoft/Xbox, Samsung and Mercedes, collaborating with digital creatives such as Universal Everything, FIELD and B-Reel. These projects have ranged from an interactive web-connected musical installation at the London Science Museum for Google, Web Lab, to a pneumatic live-streamed pinata-smashing robot.</p>
-                <p>He is co-founder of <a href="http://huldufugl.is" target="_blank">Huldufugl</a> a Reykjavik-based theatre and events company experimenting with new mediums in theatre, both technological (as with their VR shows Kassinn and Hliðstætt Fólk), and immersive</p>
-                <p>He is also co-founder of Horizons Studio, a London-based creative studio producing interactive musical experiences in VR. Their debut title, Horizons VR was commissioned by Google as a launch title for their Daydream platform, with releases on Oculus and HTC platforms planned for 2019.</p>
-                <p>He was also Sound Supervisor and on-set sound recordist on two short independent films, The Fallow Field and Who We Are, and sound editor on the Subsource Dubumentary.</p>
-                <p></p>
-                
-                
-                <h6>Awards</h6>
-                <ul>
-                    <li>Sproti Ársins (Nomination), Kassinn / A Box In The Desert, <a href="https://www.fil.is/frettir/1551/" target="_blank">Gríman (Icelandic Theatre Awards) 2020</a></li>
-                    <li>Most Amazing Game Award, Kassinn / A Box In The Desert, <a href="https://amazestuff.tumblr.com/post/184139013534/a-maze-berlin-2019-award-winners" target="_blank">A MAZE Berlin 2019</a></li>
-                    <li>Best Interactive Narrative Experience, Kassinn / A Box In The Desert, <a href="https://raindance.org/raindance-immersive-award-winners-presented-by-bose/" target="_blank">Raindance Immersive 2019</a></li>
-                    <li>Outstanding US Premiere, Kassinn / A Box In The Desert, <a href="https://sdfringe.org/" target="_blank">San Diego Fringe Festival</a></li>
-                    <li>Innovation In Performance Award, Kassinn / A Box In The Desert, <a href="https://www.facebook.com/Stoffholm/photos/now-and-then-we-come-across-work-that-takes-it-that-extra-lap-intotheunknown-by-/10155501339495855/" target="_blank">Stockholm Fringe Festival 2018</a></li>
-                    <li>Grand Prix (Nomination), Kassinn / A Box In The Desert, Stockholm Fringe Festival 2018</li>
-                    <li>People's Choice Award (Nomination), Mmorph, <a href="https://thefwa.com/editorial/the-fwa-peoples-choice-award-pca-2016-vote-now" target="_blank">FWA 2018</a></li>
-                    <li>Site Of The Month, Mmorph, <a href="https://thefwa.com/cases/mmorph" target="_blank">FWA 2016</a></li>
-                    <li>FWA Insights, Mmorph, <a href="https://thefwa.com/article/insights-mmorph" target="_blank">FWA 2016</a></li>
-                    <li>Honorable Mention, Mmorph, <a href="https://www.awwwards.com/sites/mmorph" target="_blank">Awwwards 2016</a></li>
-                    
-                    
-                    
-                </ul>
-
-                <h6>Links</h6>
-                <ul>
-                    <li><a href="https://github.com/owenhindley/" target="_blank">Github</a></li>
-                    <li><a href="https://twitter.com/owen_hindley" target="_blank">Twitter</a></li>
-                    <li><a href="https://www.instagram.com/owenhindley/" target="_blank">Instagram</a></li>
-                    <li><a href="https://www.imdb.com/name/nm3918183" target="_blank">IMDB</a></li>
-                </ul>
-                <h6>Recent Employment history</h6>
-                <ul>
-                    <li>2020-2021 Senior Developer, <a href="https://volta-xr.com/" target="_blank">Volta XR</a></li>
-                    <li>2014-2020 Freelance Developer / Artist</li>
-                    <li>2011-2014 Senior Developer, <a href="https://www.b-reel.com/" target="_blank">B-Reel London</a></li>
-                </ul>
-                
-        </article>
-
-
-
+        <section>          
+            {%- for article in whatToBring -%}            
+            <article id="{{article.data.id}}" class="whatToBring">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
         </section>
+
+        <section id="schedule">          
+            {%- for article in schedule -%}            
+            <article id="{{article.data.id}}" class="schedule">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+       
 
 
        
 
     </main>
     <footer>
-        <p>Owen Hindley, 2022</p>
+        <p>Nanna &amp; Owen, 2023</p>
 
     </footer>
 
