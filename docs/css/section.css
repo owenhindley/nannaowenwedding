@@ -34,23 +34,28 @@ section {
   section:nth-of-type(2) {
     background-color: #d99e6a; }
     section:nth-of-type(2) header {
-      background-color: #58846e; }
+      background-color: #58846e;
+      color: white; }
   section:nth-of-type(3) {
     background-color: #f2d194; }
     section:nth-of-type(3) header {
-      background-color: #f2f2f2; }
+      background-color: #f2f2f2;
+      color: #242424; }
   section:nth-of-type(4) {
     background-color: #f2f2f2; }
     section:nth-of-type(4) header {
-      background-color: #d99e6a; }
+      background-color: #d99e6a;
+      color: white; }
   section:nth-of-type(5) {
     background-color: #f2d194; }
     section:nth-of-type(5) header {
-      background-color: #f2f2f2; }
+      background-color: #f2f2f2;
+      color: white; }
   section:nth-of-type(6) {
     background-color: #58846e; }
     section:nth-of-type(6) header {
-      background-color: #f2d194; }
+      background-color: #f2d194;
+      color: white; }
   section header {
     width: auto;
     padding: 0.2em 0.2em 0.1em 0.2em;
@@ -65,7 +70,7 @@ section {
   section button {
     border-radius: 0.1em;
     padding: 1em;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background-color: #f2d194;
     border: none;
     cursor: pointer;
@@ -84,7 +89,9 @@ section {
       font-size: 3rem;
       text-align: center;
       background-color: #f2d194;
-      margin: 0.5em; }
+      margin: 0.5em;
+      color: white;
+      text-shadow: 1px 1px #bf7582; }
     section .www p {
       height: 12rem;
       margin: 0.5em; }

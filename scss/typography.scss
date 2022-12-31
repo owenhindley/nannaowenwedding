@@ -1,73 +1,40 @@
 @import './colours.scss';
 
-// @import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Zen+Loop:ital@0;1&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 
-// @font-face {
-//     font-family: 'vtf_victoriannaitalic';
-//     src: url('../fonts/vtf_victorianna_thin_talic-webfont.eot');
-//     src: url('../fonts/vtf_victorianna_thin_talic-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/vtf_victorianna_thin_talic-webfont.woff') format('woff'),
-//          url('../fonts/vtf_victorianna_thin_talic-webfont.ttf') format('truetype'),
-//          url('../fonts/vtf_victorianna_thin_talic-webfont.svg#vtf_victoriannaitalic') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
 
-// }
 
-// @font-face {
-//     font-family: 'vtf_victoriannathin';
-//     src: url('../fonts/vtf_victorianna_thin-webfont.eot');
-//     src: url('../fonts/vtf_victorianna_thin-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('../fonts/vtf_victorianna_thin-webfont.woff') format('woff'),
-//          url('../fonts/vtf_victorianna_thin-webfont.ttf') format('truetype'),
-//          url('../fonts/vtf_victorianna_thin-webfont.svg#vtf_victoriannathin') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
+$bodyFont: 'proxima-soft', Verdana, Geneva, sans-serif;
+$titleFont: 'rig-solid-bold-fill', Verdana, Geneva, sans-serif;
+$headerFont: 'bd-supper', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-// }
 
-// @font-face {
-// 	font-family: 'alternate_gothic_no1_dregular';
-// 	src: url("../fonts/alternate_gothic_no1_d-webfont.eot");
-// 	src: url("../fonts/alternate_gothic_no1_d-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/alternate_gothic_no1_d-webfont.woff") format("woff"), url("../fonts/alternate_gothic_no1_d-webfont.ttf") format("truetype"), url("../fonts/alternate_gothic_no1_d-webfont.svg#alternate_gothic_no1_dregular") format("svg");
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-
-// @font-face {
-// 	font-family: 'futura_ltcn_btlight';
-// 	src: url("../fonts/futuralc-webfont.eot");
-// 	src: url("../fonts/futuralc-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/futuralc-webfont.woff") format("woff"), url("../fonts/futuralc-webfont.ttf") format("truetype"), url("../fonts/futuralc-webfont.svg#futura_ltcn_btlight") format("svg");
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
+body, html {
+    font-family: $bodyFont;
+    letter-spacing: 0.03em;
+    color: $textColor;
+}
 
 h1,
 h2,
 h3,
 h4,
 header {
-    font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial,
-        sans-serif;
-    font-weight: normal;
+    font-family: $headerFont;
+    font-weight: 600;
     letter-spacing: -0.02em;
-    // text-shadow: $highlightColor 0px -1px 2px;
-    // text-shadow: 0px 1px 2px $highlightColor;
 }
 
 h5,
 h6 {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial,
-        sans-serif;
+
+    font-family: $headerFont;
     font-weight: normal;
     letter-spacing: 0.02em;
 }
 
 h6 {
-    font-family: 'Open Sans', Verdana, Geneva, sans-serif;
     font-weight: lighter;
     letter-spacing: 0.05em;
     font-size: 80%;
@@ -127,6 +94,6 @@ p,
 li,
 ul {
     line-height: 1.5em;
-    font-size: 1.1em;
+    font-size: 1.25em;
     color: darken($textColor, 20);
 }

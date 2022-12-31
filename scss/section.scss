@@ -16,30 +16,35 @@ section {
         background-color: $c1;
         header {
             background-color: $c2;
+            color:$textColorLight;
         }
     }
     &:nth-of-type(3) {
         background-color: $c3;
         header {
             background-color: $c4;
+            color:$textColor;
         }
     }
     &:nth-of-type(4) {
         background-color: $c4;
         header {
             background-color: $c1;
+            color:$textColorLight;
         }
     }
     &:nth-of-type(5) {
         background-color: $c3;
         header {
             background-color: $c4;
+            color:$textColorLight;
         }
     }
     &:nth-of-type(6) {
         background-color: $c2;
         header {
             background-color: $c3;
+            color:$textColorLight;
         }
     }
     header {
@@ -60,7 +65,7 @@ section {
     button {
         border-radius: $borderRadius;
         padding: 1em;
-        font-size: 1rem;
+        font-size: 1.5rem;
         background-color: $c3;
         border: none;
         cursor: pointer;
@@ -79,6 +84,8 @@ section {
             text-align: center;
             background-color: $c3;
             margin: 0.5em;
+            color:$textColorLight;
+            text-shadow: 1px 1px $ca;
         }
         p {
             height: 12rem;

@@ -49,23 +49,27 @@
   100% {
     color: #bf7582; } }
 
+body, html {
+  font-family: "proxima-soft", Verdana, Geneva, sans-serif;
+  letter-spacing: 0.03em;
+  color: #242424; }
+
 h1,
 h2,
 h3,
 h4,
 header {
-  font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "bd-supper", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
   letter-spacing: -0.02em; }
 
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "bd-supper", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   letter-spacing: 0.02em; }
 
 h6 {
-  font-family: 'Open Sans', Verdana, Geneva, sans-serif;
   font-weight: lighter;
   letter-spacing: 0.05em;
   font-size: 80%; }
@@ -114,7 +118,7 @@ p,
 li,
 ul {
   line-height: 1.5em;
-  font-size: 1.1em;
+  font-size: 1.25em;
   color: black; }
 
 /* Color Theme Swatches in RGBA */
@@ -153,27 +157,22 @@ nav {
     height: 4em;
     display: inline-block; }
     nav label span {
-      cursor: pointer;
-      padding: 0.3em;
-      padding-bottom: 0.1em;
-      border-radius: 0.1em;
-      color: black;
-      font-family: 'Josefin Sans';
-      text-transform: uppercase;
-      font-weight: bolder;
-      font-size: 44px;
-      cursor: pointer;
-      transition: transform 0.2s; }
-      nav label span:hover {
-        transform: scale(1.1); }
-    nav label:nth-of-type(4n) span {
-      background-color: #bf7582; }
-    nav label:nth-of-type(4n + 1) span {
-      background-color: #d99e6a; }
-    nav label:nth-of-type(4n + 2) span {
-      background-color: #58846e; }
-    nav label:nth-of-type(4n + 3) span {
-      background-color: #f2d194; }
+      cursor: pointer; }
+      nav label span h6 {
+        padding: 0.1em 0.3em 0.1em 0.3em;
+        border-radius: 0.1em;
+        color: black;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 44px;
+        cursor: pointer;
+        transition: transform 0.2s; }
+        nav label span h6:hover {
+          transform: scale(1.1); }
+    nav label:nth-of-type(n) span h6 {
+      background-color: #f2d194;
+      color: white;
+      text-shadow: 1px 1px #bf7582; }
     nav label input {
       appearance: none;
       margin-left: -1em; }
@@ -218,16 +217,18 @@ body .container > header {
   margin-top: 10rem;
   margin-bottom: 10rem;
   color: #f2d194;
-  font-weight: bold;
-  text-shadow: 0px 0px 6px #d99e6a; }
-  body .container > header h1 {
+  text-shadow: 0px 0px 2px #242424; }
+  body .container > header h1, body .container > header h3, body .container > header h6 {
     text-align: center;
-    text-transform: uppercase;
-    font-size: 8rem; }
+    text-transform: uppercase; }
+  body .container > header h1, body .container > header h6 {
+    font-family: "rig-solid-bold-fill", Verdana, Geneva, sans-serif;
+    font-size: 8.5rem;
+    font-weight: 300; }
   body .container > header h3 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 4rem; }
+    font-size: 5rem; }
+  body .container > header h6 {
+    font-size: 3rem; }
   body .container > header aside {
     position: absolute;
     right: 0;
@@ -269,23 +270,28 @@ section {
   section:nth-of-type(2) {
     background-color: #d99e6a; }
     section:nth-of-type(2) header {
-      background-color: #58846e; }
+      background-color: #58846e;
+      color: white; }
   section:nth-of-type(3) {
     background-color: #f2d194; }
     section:nth-of-type(3) header {
-      background-color: #f2f2f2; }
+      background-color: #f2f2f2;
+      color: #242424; }
   section:nth-of-type(4) {
     background-color: #f2f2f2; }
     section:nth-of-type(4) header {
-      background-color: #d99e6a; }
+      background-color: #d99e6a;
+      color: white; }
   section:nth-of-type(5) {
     background-color: #f2d194; }
     section:nth-of-type(5) header {
-      background-color: #f2f2f2; }
+      background-color: #f2f2f2;
+      color: white; }
   section:nth-of-type(6) {
     background-color: #58846e; }
     section:nth-of-type(6) header {
-      background-color: #f2d194; }
+      background-color: #f2d194;
+      color: white; }
   section header {
     width: auto;
     padding: 0.2em 0.2em 0.1em 0.2em;
@@ -300,7 +306,7 @@ section {
   section button {
     border-radius: 0.1em;
     padding: 1em;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background-color: #f2d194;
     border: none;
     cursor: pointer;
@@ -319,7 +325,9 @@ section {
       font-size: 3rem;
       text-align: center;
       background-color: #f2d194;
-      margin: 0.5em; }
+      margin: 0.5em;
+      color: white;
+      text-shadow: 1px 1px #bf7582; }
     section .www p {
       height: 12rem;
       margin: 0.5em; }
@@ -361,8 +369,6 @@ html {
   background: #c5c5c5, url(../images/video-overlay.png);
   background-size: 100% 100%, 2px 2px;
   background-repeat: no-repeat, repeat;
-  font-family: 'Open Sans', Verdana, Geneva, sans-serif;
-  color: #242424;
   width: 100%;
   margin: 0;
   padding: 0;

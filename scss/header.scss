@@ -4,18 +4,30 @@ body .container > header {
     margin-top: 10rem;
     margin-bottom: 10rem;
     color: $c3;
-    font-weight: bold;
-    text-shadow: 0px 0px 6px $c1;
+    // font-weight: bold;
+    text-shadow: 0px 0px 2px $textColor;
 
-    h1 {
+    h1, h3, h6 {
+       
         text-align: center;
         text-transform: uppercase;
-        font-size: 8rem;
+        
+    }
+
+    h1,h6 {
+        font-family: $titleFont;
+        font-size: 8.5rem;
+        font-weight: 300;
+        
     }
     h3 {
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 4rem;
+        font-size: 5rem;
+        
+    }
+    h6 {
+      
+        font-size: 3rem;
+      
     }
 
     aside {

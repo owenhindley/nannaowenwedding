@@ -19,17 +19,30 @@
 // $c1: #3b82bf;
 // $c0: #bf7582;
 
+
+
 $c0: #bf7582;
 $c1: #d99e6a;
 $c2: #58846e;
 $c3: #f2d194;
 $c4: #f2f2f2;
 
+$c0_alt: $c2;
+$c1_alt: $c4;
+$c2_alt: $c0;
+$c3_alt: $c2;
+$c4_alt: $c0;
+
+$cm: $c3;
+$ca: $c0;
+
+
 $borderRadius: 0.1em;
 
 // $backgroundColor:#1c1c1c;
 $backgroundColor: rgb(197, 197, 197);
 $textColor: #242424;
+$textColorLight: lighten($backgroundColor, 25);
 $highlightColor: darken($textColor, 20);
 
 // $c0: #3502ff;
