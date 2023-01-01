@@ -3,16 +3,23 @@
 @import './nav.scss';
 @import './header.scss';
 @import './section.scss';
-@import './slideshow.scss';
+@import './carousel.scss';
 
 // $backgroundColor: #1c1c1c;
 // $textColor: #dbdad8;
 
 body,
 html {
-    background: $backgroundColor, url(../images/video-overlay.png);
-    background-size: 100% 100%, 2px 2px;
-    background-repeat: no-repeat, repeat;
+    // background: $backgroundColor, url(../images/video-overlay.png);
+    // background-size: 100% 100%, 2px 2px;
+    // background-repeat: no-repeat, repeat;
+
+    // background: url(../images/location/location-5.jpg);
+    // background-position: 50% 50%;
+    // background-size:cover;
+    // background-attachment: fixed;
+
+    background-color: $cm;
     
     width: 100%;
 
@@ -25,6 +32,7 @@ html {
 
 .container {
     z-index: 2;
+    position: relative;
     // position: absolute;
     height: 100%;
     // background-image: repeating-linear-gradient(299deg, #343434 0%, #1c1c1c 50%, black 75%, #0b1320 100%);
@@ -55,18 +63,18 @@ html {
     object-fit: cover;
     display: block;
     opacity: 1;
-    z-index: -1;
+    z-index: 0;
 }
 #video-overlay {
-    background-image: url(),
-        linear-gradient(
-            to bottom,
-            transparent 0%,
-            rgba(197, 197, 197, 0.2) 75%,
-            $backgroundColor 100%
-        );
-    background-size: 2px 2px, 100% 100%;
-    background-repeat: repeat, no-repeat;
+    // background-image: url(),
+    //     linear-gradient(
+    //         to bottom,
+    //         transparent 0%,
+    //         rgba(197, 197, 197, 0.2) 75%,
+    //         $backgroundColor 100%
+    //     );
+    // background-size: 2px 2px, 100% 100%;
+    // background-repeat: repeat, no-repeat;
     opacity: 1;
 }
 

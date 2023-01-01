@@ -33,6 +33,7 @@
 <script>
 	function OnNavChange(e){
 		document.querySelector('main').className = e;
+        location.hash = "#" + e;
 	}
 
     var videoElement;
@@ -66,6 +67,35 @@
 
     <div class="container">
   
+        <nav>       
+            <div id="navInner">
+            <label onclick="OnNavChange('location')">
+                <input type="radio" name="nav" id="check-location"></input>
+                <span><h6>Location</h6></span>
+            </label>	
+            <label onclick="OnNavChange('travel')">
+                <input type="radio" name="nav" id="check-travel"></input>
+                <span><h6>Getting There</h6></span>
+            </label>	
+            <label onclick="OnNavChange('accommodation')">
+                <input type="radio" name="nav" id="check-accommodation"></input>
+                <span><h6>Accommodation</h6></span>
+            </label>	
+            <label onclick="OnNavChange('what-to-bring')">
+                <input type="radio" name="nav" id="check-what-to-bring"></input>
+                <span><h6>What To Bring</h6></span>
+            </label>
+                   
+            <label onclick="OnNavChange('schedule')">
+                <input type="radio" name="nav" id="check-schedule"></input>
+                <span><h6>Schedule</h6></span>
+            </label>	
+            <label onclick="OnNavChange('rsvp')">
+                <input type="radio" name="nav" id="check-rsvp"></input>
+                <span><h6>RSVP</h6></span>
+            </label>
+        </div>		
+        </nav>
 
     <header>
        
@@ -76,35 +106,14 @@
                 
             </h6>    
         </aside> -->
+        <img src="images/title.png"/>
         <h1>Nanna &amp; Owen</h1>        
         <h3>Are getting married</h3>
         <h6>25. 27. August 2022</h6>
     </header>
 
 
-    <nav>       
-        <label onclick="OnNavChange('location')">
-            <input type="radio" name="nav" id="check-location"></input>
-            <span><h6>Location</h6></span>
-        </label>	
-        <label onclick="OnNavChange('travel')">
-            <input type="radio" name="nav" id="check-travel"></input>
-            <span><h6>Getting There</h6></span>
-        </label>		
-        <label onclick="OnNavChange('what-to-bring')">
-            <input type="radio" name="nav" id="check-what-to-bring"></input>
-            <span><h6>What To Bring</h6></span>
-        </label>
-       		
-        <label onclick="OnNavChange('schedule')">
-            <input type="radio" name="nav" id="check-schedule"></input>
-            <span><h6>Schedule</h6></span>
-        </label>	
-        <label onclick="OnNavChange('faq')">
-            <input type="radio" name="nav" id="check-faq"></input>
-            <span><h6>FAQ</h6></span>
-        </label>		
-    </nav>
+   
 
     <main class="all">
 
@@ -114,226 +123,319 @@
         
         
         
+        
 
-        <section class="about"><article id="nanna-and-owen"  class="about">                
-                
-[ a bit about Nanna + Owen]
-
-            </article><article id="what-where-when"  class="about">                
-                
+        <section id="about"><article id="what-where-when"  class="about">                
+                <div class="www-container">
 <div class="www">
     <header>What</header>
+    <h5>
+        Nanna and Owen are getting married! (again*) And we want to celebrate with you in one of our favourite places on earth!<br /><br />
+        </h5>
     <p>
-        Nanna and Owen are getting married! And we want to celebrate
-        it with you, in one of our favourite places on earth.<br /><br />
-
         Please RSVP below, let us know if you can make it by 1st March
         2023
     </p>
-    <a href="http://www.google.com" target="_blank"
-        ><button>RSVP</button></a
-    >
-</div>
-
-<div class="www">
-    <header>Where</header>
-    <p>
-        Þórsmörk (Thors-mork) - a beautiful green valley on the South
-        Coast of Iceland, named after the guy with the long hair and a
-        hammer.
-    </p>
-    <a href="https://goo.gl/maps/hEkF6URyBkydgPoWA" target="_blank"
-        ><button>Map</button></a
-    >
+   
 </div>
 
 <div class="www">
     <header>When</header>
-    <p>
+    <h5>
         25th - 27th August, 2023<br />
-        (See schedule below)
-    </p>
-    <a href="#schedule" target="_blank"><button>Schedule</button></a>
+        
+    </h5>
+    <br/>
+    <p>(Although we'll be there for a few days before / after, if you want to make it a longer trip)</p>
+   
 </div>
+
+
+<div class="www">
+    <header>Where</header>
+    <h5>
+        Þórsmörk (Thors-mork) - a beautiful green valley on the South
+        Coast of Iceland, named after the guy with the long hair and a
+        hammer.
+    </h5>
+   
+</div>
+
+</div>
+<div class="www-buttons">
+    <a href="http://www.google.com" target="_blank"
+    ><button><h5>RSVP</h5></button></a
+>
+    <a href="#schedule"><button><h5>SCHEDULE</h5></button></a>
+    <a href="https://goo.gl/maps/hEkF6URyBkydgPoWA" target="_blank"
+    ><button><h5>MAP</h5></button></a
+>
+</div>
+
+
+            </article><article id="nanna-and-owen"  class="about">                
+                <header>About Us</header>
+<img class="floatLeft" src="images/about-us/engagement-0.jpg"/>
+
+    <h3>Chances are, if you're reading this, you already know us (or at least one of us).</h3>
+    <h5> * But here's a little recap of our story.</h5>
+    <p>
+    Nanna moved to London from Reykjavík in 2009 to study European theatre. Owen moved to London in 2010 from Guildford to start work for Metropolis recording studio. At Metropolis he got to know his first Icelander, Ragnar, and he subsequently moved in with Ragnar and all his badgers. Coincidentally, Owen and Ragnar share the same birthday.</p>
+    <p>Nanna studied with another Icelander, Brynja, who started dating Ragnar - whom Nanna had put dibs on. (Brynja and Ragnar are still together and now have a baby).</p>
+<p> In 2012, around the time that Owen and Ragnar had a birthday, they had a film night at their place, and Brynja brought Nanna along to it. Nanna flirted the entire evening with Owen, who took no notice of it.</p>
+<p>A couple of months later, Owen was dragged along to an Icelandic Eurovision party in a pub in west London, meeting Nanna a second time, this time partying with Iceland's craziest Eurovision fan, her sister Tinna. After a long night of searching for a party in the city that falls asleep at 11pm, Owen and Nanna got to crash at the sofa at Tinna's place. And as they walked away the next day, Tinna remarked that they had a “hjónasvipur” (Icelandic word for “looking like they'll get hitched”). This was shortly before Nanna graduated, and intended to leave London.</p>
+<p> A week later they went on their first “date” - at a one day music festival in London, and a month later Owen came to Iceland for the first time, hiking the Fimmvörðuháls hike to Þórsmörk.</p>
+<p>At Edinburgh Fringe festival they had the “couple talk”, directly followed by Nanna asking to live with Owen for a short 2 month stint before travelling to Brazil and Argentina.</p>
+   <h5>- Next 10 years in short: -</h5>
+    <p>Nanna managed to get Owen to travel around the world for fun, and Owen managed to get Nanna to stick around in London for 4 more years and learn to drink tea. They have both spent 7 years of their lives in London, and have now spent 7 years living together in Iceland. When they moved to Iceland they founded a theatre company together, Huldufugl, which has enabled them to create projects together and perform around the world, working with projects as diverse as circus, virtual reality, ABBA and Fringe festivals.</p>
+<p>After spending a decade together, they got married in a small ceremony in Reykjavík on Nanna's parents wedding anniversary date, 11.11.22. </p>
+    
+  <h3>However, now it's time to have the big party with friends we've gathered in one place from around the world, people we've met on various travels and adventures.</h3>
+     <p>This weekend will be coloured by our many travels and experiences, mixing Icelandic, British and Brazilian culture, and even with a dash of Indian culture. We can't wait for our British, Icelandic, Brazilian, Indian, Australian, American, African and all over European friends to meet each other, surrounded by the impressive Þórsmörk natural beauty!
+</p>
 
             </article></section>
 
-        <section><article id="section-location" class="location">
-                <header>The Location</header>
+        <section id="location"><article id="section-location" class="location">
+                <header>The Location - Básar, Þórsmörk</header>
                 
-<p>
-    Þórsmörk is a region and valley in South Iceland, bordered on one
-    side by Eyjafjallajökull (yep, that volcano from 2010), and the
-    Icelandic highlands on the other. It's got a great big river
-    running through the middle (Krossá), which gets fed by smaller
-    rivers coming down off the glacier, some of which pass straight
-    through the road.
-</p>
+
+<div class="carousel">
+  <div class="slider">
+    
+
+    <div class="slides">
+      <div id="location-slide-1">
+        <img src="images/location/location-12.jpg">
+      </div>
+      <div id="location-slide-2">
+        <img src="images/location/location-9.jpg">
+      </div>
+      <div id="location-slide-3">
+        <img src="images/location/location-0.jpg">
+      </div>
+     
+      <div id="location-slide-4">
+        <img src="images/location/location-3.jpg">
+      </div>
+    
+      <div id="location-slide-5">
+        <img src="images/location/location-5.jpg">
+      </div>
+      <div id="location-slide-6">
+        <img src="images/location/location-6.jpg">
+      </div>
+      <div id="location-slide-7">
+        <img src="images/location/location-7.jpg">
+      </div>
+      <div id="location-slide-8">
+        <img src="images/location/location-8.jpg">
+      </div>
+
+      <div id="location-slide-9">
+        <img src="images/location/location-10.jpg">
+      </div>
+
+    </div>
+    <a href="#location-slide-1">.</a>
+    <a href="#location-slide-2">.</a>
+    <a href="#location-slide-3">.</a>
+    <a href="#location-slide-4">.</a>
+    <a href="#location-slide-5">.</a>
+    <a href="#location-slide-6">.</a>
+    <a href="#location-slide-7">.</a>
+    <a href="#location-slide-8">.</a>
+    <a href="#location-slide-9">.</a>
+  </div>
+</div> 
+
+<h3>
+  Þórsmörk is a valley in South Iceland - <br />
+  bordered on one side by Eyjafjallajökull <br />(yep, that volcano from 2010)<br />
+  and the Icelandic highlands on the other.</h3>
+
+<img class="floatLeft" src="images/location/basar-1.jpg" />
 
 <p>
-    The campground / cabin area in Þórsmörk we'll be in is called
-    Básar, the largest and best-equipped in the valley. It's
-    surrounded by dramatic rocky outcrops, cosy forests, tiny glacial
-    streams and woody paths winding up to epic mountainside meadows
-    where you might just catch sight of an arctic fox - or find some
-    wild blueberries to snack on. In one direction you can see
-    glaciers, or the red-orange mountains in Landmannalaugar, in the
-    other direction you can almost see to the coast and the North Sea.
+  The campground / cabin area in Þórsmörk we'll be in is called
+  Básar, the largest and best-equipped in the valley.
 </p>
-
+<p> It's
+  surrounded by dramatic rocky outcrops, cosy forests, tiny glacial
+  streams and woody paths winding up to epic mountainside meadows
+  where you might just catch sight of an arctic fox - or find some
+  wild blueberries to snack on.
 <p>
-    It's one of the most beautiful places in all of Iceland, and we're
-    excited to welcome you all!
+
+<p>In one direction you can see
+  glaciers, or the red-orange mountains in Landmannalaugar, in the
+  other direction you can almost see to the coast and the North Sea.
 </p>
 
+<h4>
+  It's one of the most beautiful places in all of Iceland, and we're
+  excited to welcome you all!
+</h4>
+
+<br />
             </article><article id="section-facilities" class="location">
                 <header>Facilities</header>
                 
-<p>
+<img class="floatRight" src="images/location/location-2.jpg"/>
+
+<h4>
     Básar is the start and end point for two of the most popular hikes
-    in Iceland. So they have exactly what you'd want after a day or
+    in Iceland. 
+</h4>
+<br/>
+<p>
+    They have exactly what you'd want after a day or
     four living out of a backpack and sleeping in a tent. Hot showers,
-    electricity, 4G signal, toilets (with toilet paper), a small shop
-    and even a bar. The shop sells hot dogs, grilled sandwiches,
-    snacks and a limited amount of spare camping bits.
+    electricity, 4G signal, toilets, a small shop
+    and even a bar. 
 </p>
+
+<!-- <img class="floatLeft" src="images/location/basar-0.jpg"/> -->
+<p>
+    The shop sells hot dogs, grilled sandwiches,
+    snacks and a limited amount of spare camping bits.</p>
 <p>
     You won't be able to buy a new sleeping bag there, but they may
     sell you a pair of thick woolly socks when you discover that your
     H&M ankle socks aren't quite cutting it.
 </p>
 
-            </article><article id="section-foodDrink" class="location">
-                <header>Food &amp; Drink</header>
-                
-<p>We will be serving the following meals:</p>
-<ul>
-    <li>Friday night</li>
-    <li>Saturday breakfast</li>
-    <li>Saturday lunch / high tea</li>
-    <li>Saturday evening meal + Churrasco</li>
-    <li>Sunday leftover brunch</li>
-</ul>
-
-<p>
-    There are several outdoor grilling areas where you can cook extra
-    bits if you feel the need, and a kitchen with several hotplates in
-    the main hut. However from Friday-Sunday morning these will likely
-    be in use for preparing the main wedding feast, so if you're
-    planning on being with us earlier than Friday afternoon or later
-    than Sunday (which will be great!), consider bringing your own gas
-    stove or things that can be thrown on the barbeque (bring your own
-    coals).
+            </article><article id="section-weather" class="location">
+                <header>The Weather</header>
+                <h3>
+There's a saying in Iceland: "If you don't like the weather, just wait 5 minutes".
+</h3> 
+<p>There's another saying: "There's no such thing as bad weather, just being poorly dressed".
 </p>
-
-<p>
-    We'll be providing enough beer and wine for everybody, and maybe
-    even a
-    <a
-        href="https://svantana.bandcamp.com/track/you-were-workin-as-a-waitress-in-a-cocktail-bar"
-        target="_blank"
-        >cocktail bar</a
-    >. You are, of course, welcome to bring your own (the glacial
-    rivers that run through the campsite make excellent beer fridges),
-    but you shouldn't need to in order to maintain a full glass or
-    beer in hand at all times.
+<p>Although Þórsmörk is famed for having more pleasant weather than its surrounding area, due to the fact that the area is circled by mountains that keep most of the wind at bay, there is still a high chance of unpleasant weather. 
 </p>
-
+<p>This may come in the form of rain, wind or even snow/hail. If we're lucky, there'll be pleasant sunshine throughout the weekend, but you'd be wise to prepare for the worst but hope for the best. Also note that the area is in a green birch area, right next to a glacier and a volcano, so contrasts can be extreme in both landscape and weather.</p>
+<p>
+Temperature may range from anything between 5°C-25°C, but one thing is for certain - <strong>there will be daylight until close to midnight, and darkness will only last for about 2-3 hours.</strong></p>
             </article></section>
 
-        <section><article id="section-byAir" class="travel">
-                <header>By Air</header>
-                
-<p>
+        <section id="travel"><article id="section-byAir" class="travel">
+                <header>Getting to Iceland - By Air</header>
+                <h4>
     If you don't already live in Iceland, it's very likely you'll need
-    to book a ticket on a plane to get from where you currently live
-    to our wedding, on account of it being surrounded by sea, and
-    quite a long way away from anything else.
-</p>
+    to book a ticket on a plane to get to our wedding.
+</h4>
+<h5>(because Iceland is surrounded by sea and
+    quite a long way away from anything else.)</h5>
+    <br/>
 
-<p>
-    Þósmörk does technically have its own airport (<a
-        href="https://www.greatcirclemapper.net/en/airport/BITM-thorsmoerk-airport.html"
-        target="_blank"
-        >BITM</a
-    >), but you might struggle to find people to fly you there, and
-    most importantly there is no duty-free on arrival (or actual
-    buildings of any kind), so we recommend Keflavik International
-    Airport (KEF) to be on the safe side.
-</p>
+    <img src="images/travel/iceland-map-annotated.jpeg" class="floatRight"/>
+
+
 
 <p>
     Keflavik is a small, cosy airport, with a very well stocked
     duty-free (see Food & Drinks). If you look out of the right window
     when you're coming in from Europe, you might just see the latest
-    volcano smoking away (if you're coming from the US, you're out of
-    luck). There's also an airport in Reykjavik City, but that's only
-    for domestic trips (with some exceptions).
+    volcano smoking away.</p>
+    <p> There's also an airport in Reykjavik City, but that's only
+    for domestic trips.
 </p>
 
-<p>From Keflavik Airport your options are:</p>
+<h4>From Keflavik Airport your options are:</h4>
+<br/>
 <ul>
     <li>
-        Take a transfer bus to Reykjavik (45 minutes - we reccomend
-        FlyBus), and depending on when you arrive, spend some time
+        <h5>Take a transfer bus to Reykjavik</h5> 
+        (45 minutes - we reccomend FlyBus)
+        Depending on when you arrive, spend some time
         there before taking another bus to Þórsmörk Básar (options for
         public buses)
-        <br/><em>- or -</em>
+        <br/><strong><em>- or -</em></strong>
     </li>
     <li>
-        Hire a regular car at the airport (recommendations), go for a
-        sightseeing drive, and park the car near Seljalandsfoss and
+        <h5>Hire a small car at the airport</h5> 
+        (recommendations)
+        Go for a sightseeing drive, park the car near Seljalandsfoss and
         take a bus to Þórsmörk Básar (you can't drive a regular car
         the whole way due to river crossings)
-        <br/><em>- or -</em>
+        <br/><strong><em>- or -</em></strong>
     </li>
     <li>
-        If you're experienced at 4x4 off-road driving, and are
-        confident driving through rivers, you can hire a bigger car
+        <h5>Hire a 4x4 car at the airport</h5>
+        If you're experienced at 4x4 driving on rugged terrain, and are
+        confident with deep river crossings, you can hire a bigger car
         and drive the whole way to Básar yourself. There's one
         significant river crossing, to a depth of around 1m (depending
-        on the weather). There's also 4x4 campervans available from
-        (link).
+        on the weather).
+        <br/><strong><em>- or -</em></strong>
+    </li>
+    <li>
+        <h5>Hire a 4x4 campervan</h5>
+        Solve your transport and accommodation at the same time!
     </li>
 </ul>
-<p>
+<br/>
+<h4>
     We may be chartering / hiring buses to make the journey more
     straightforward (and fun!), we'll post more about this soon.
+</h4>
+<br/>
+<br/>
+
+<p><em>
+    Þósmörk does technically have its own airport (<a
+        href="https://www.greatcirclemapper.net/en/airport/BITM-thorsmoerk-airport.html"
+        target="_blank"
+        >BITM</a
+    >), but you might struggle to find people to fly you there, and
+    most importantly there is no duty-free on arrival (or
+    buildings of any kind), so we recommend Keflavik to be on the safe side.
+</em>
 </p>
+<br/>
 
             </article><article id="section-byFoot" class="travel">
-                <header>By Foot</header>
+                <header>Bonus - Hiking to Þórsmörk Básar</header>
                 
-<p>
+<h4>
     Þórsmörk is the finishing point for two of Iceland's most popular
     hikes, Laugavegur (3-4 days) and Fimmvörðuháls (1 day).
-</p>
+</h4>
+<br/>
+<img src="images/travel/hiking-0.jpg" class="floatRight"/>
 <p>
-    <em
-        >Actually, Owen walked Fimmvörðuháls with Nanna on his very
+    <em>Owen walked Fimmvörðuháls with Nanna on his very
         first trip to Iceland, which is the main reason why we wanted
         to hold the wedding here.</em
     >
+    </p>
+<img src="images/travel/hiking-1.jpg" class="floatLeft"/>
+<p>
+    So if you want to be super adventurous, you'd arrive in Reykjavik, and then book travel to either Landmannalaugar (hot springs and pink mountains) for the 3-4 day Laugavegur hike, or Skogarfoss (big-ass waterfall) for the 1 day Fimmvörðuháls hike.
 </p>
-
+<h5>Laugavegur info : <a href="https://www.fi.is/en/hiking-trails/trails/laugavegur">link</a></h5>
+<h5>Fimmvörðuháls info : <a href="https://www.fi.is/en/hiking-trails/trails/fimmvorduhals">link</a></h5>
+<br/>
 <p>
     Some of you have already expressed an interest in hiking to the
     venue - and we can transport anything you don't need for the hike
     directly to the venue (like your tents, if you stay in the huts
     along the way).
 </p>
-<p>
+<h4>
     Just message us if you're interested, and we'll tell you all you
     need to know, as well as connecting you with other people who want
     to do the same.
-</p>
+</h4>
 
             </article><article id="section-bySea" class="travel">
-                <header>By Sea</header>
+                <header>Low Carbon Option - Travel By Sea</header>
                 
+<h4> You can travel by sea from Europe to Iceland!</h4>
+<br/>
 <p>
-    You can travel by sea from Europe to Iceland - the Smyril Line
-    ferry travels from Hirtshals in Denmark to beautiful Seyðisfjörður
+    The Smyril Line ferry travels from Hirtshals in Denmark to beautiful Seyðisfjörður
     on the East coast of Iceland, taking 2-3 days, depending on the
     schedule (<a
         href="https://booking.smyrilline.fo/en/book/return/journeySearch/"
@@ -346,19 +448,14 @@
     It's a car ferry, so it's ideal if you're looking to make a bigger
     trip with a campervan or your own car. The ferry also stops off at
     the Faroe Islands along the way.
-</p>
-
-<p>
     Once you land in Iceland, you'll then need to drive yourself to
     Seljalandsfoss (we'd reccomend taking at least two days to do
     this, there's plenty to see on the way), and then either transfer
     to a bus going to Þórsmörk Básar (you can't drive a regular car or
     van the whole way due to river crossings), or hire a 4x4 to drive
     the whole way if you're confident (see above).
-</p>
-<p>
-    There are public buses going that way, if you're feeling
-    adventurous, from Egilsstaðir - see
+    <br/>
+    There are buses going that way, if you want to keep things public transport all the way, from Egilsstaðir - see
     <a href="https://straeto.is/en" target="_blank"
         >Straeto (Icelandic public bus system)</a
     >
@@ -371,36 +468,98 @@
 </p>
 
             </article></section>
-        <section><article id="section-accommodation" class="accommodation">
+        <section id="accommodation"><article id="section-accommodation" class="accommodation">
                 <header>Accommodation</header>
                 
 <p>
     Being a stunningly remote location in the Highlands, there are no
     5-star hotels nearby. You'll have three main options for
-    accomodation - a bed in the cabin, a campervan, or bringing your
+    accommodation - a bed in the cabin, a campervan, or bringing your
     own tent.
 </p>
 
             </article><article id="article-the-cabins" class="accommodation">
-                <header>The Cabins</header>
+                <header>Básar - The Cabins</header>
                 
-<p>
-    Basar has two large wooden cabins, and sleeps 75 friendly people
+<h4>
+    Básar has two large wooden cabins, and sleeps 75 friendly people
     across two floors each.
-</p>
+</h4>
+<br />
+
+<!-- <div class="carousel">
+    <div class="slider">
+
+
+        <div class="slides">
+            <div id="cabin-slide-1">
+                <img src="images/cabins/cabins-0.jpg">
+            </div>
+            <div id="cabin-slide-2">
+                <img src="images/cabins/cabins-1.jpg">
+            </div>
+            <div id="cabin-slide-3">
+                <img src="images/cabins/cabins-2.jpg">
+            </div>
+            <div id="cabin-slide-4">
+                <img src="images/cabins/cabins-3.jpg">
+            </div>
+            <div id="cabin-slide-5">
+                <img src="images/cabins/cabins-4.jpg">
+            </div>
+            <div id="cabin-slide-6">
+                <img src="images/cabins/cabins-5.jpg">
+            </div>
+            <div id="cabin-slide-7">
+                <img src="images/cabins/cabins-6.jpg">
+            </div>
+            <div id="cabin-slide-8">
+                <img src="images/cabins/cabins-7.jpg">
+            </div>
+        </div>
+        <a href="#cabin-slide-1">.</a>
+        <a href="#cabin-slide-2">.</a>
+        <a href="#cabin-slide-3">.</a>
+        <a href="#cabin-slide-4">.</a>
+        <a href="#cabin-slide-5">.</a>
+        <a href="#cabin-slide-6">.</a>
+        <a href="#cabin-slide-7">.</a>
+        <a href="#cabin-slide-8">.</a>
+    </div>
+</div> -->
+
+<img src="images/cabins/cabins-0.jpg" class="triple" />
+<img src="images/cabins/cabins-2.jpg" class="triple" />
+<img src="images/cabins/cabins-4.jpg" class="triple" />
+<!-- <img src="images/cabins/cabins-5.jpg" class="floatLeft"/> -->
+
+<!-- <img src="images/cabins/cabins-1.jpg" class="floatLeft"/> -->
+
+
+
+<!-- <img src="images/cabins/cabins-7.jpg" class="floatLeft"/> -->
+
 <p>
     As you can see from the photos, it's bunk-bed style sleeping, and
     you'll need to bring your own bedding (a sleeping bag or duvet /
-    bedcovers). The cabins are both very warm and cosy, have power
+    bedcovers).
+</p>
+
+
+
+<p> The cabins are both very warm and cosy, have power
     points, toilets, showers (with underfloor heating!) and kitchen
     which you'll have full acess to regardless of whether you're
     staying there or not.
 </p>
-<p>
+
+
+<h5>
     We're getting a special deal on the cabins, two nights for 10,000
     ISK per person.
-</p>
-
+</h5>
+<!-- <img src="images/cabins/cabins-6.jpg" class="floatRight"/> -->
+<br />
             </article><article id="article-campervans" class="accommodation">
                 <header>Campervans</header>
                 
@@ -413,16 +572,19 @@
     Note that if there's been heavy rain, the river might be higher
     than usual, and you may have to take a bus - but we'll be
     travelling there ahead of time, so can let everyone know what the
-    state of the road is.
+    state of the road is. You can also check the <a href="https://umferdin.is/en/road/913110023">status</a> of the road online.
 </p>
 
-<p>
+<h5>
     The campsite charges 2000 ISK per person per night for campervans.
-</p>
+</h5>
+<br/>
 
             </article><article id="section-tents" class="accommodation">
                 <header>Tents</header>
                 
+<img class="floatRight" src="images/tents/tents-0.jpg"/>
+
 <p>
     Tents are the simplest option, and camping in the woods at
     Þórsmörk is a great experience. You can find a nice secluded spot
@@ -431,22 +593,24 @@
     area is large, but easy to navigate.
 </p>
 
-<p>The campsite charges 2000 ISK per person per night for tents.</p>
+
+
+<h5>The campsite charges 2000 ISK per person per night for tents.</h5>
+<br/>
 
             </article></section>
 
-        <section><article id="clothing" class="whatToBring">
-                <header>Clothing</header>
+        <section id="what-to-bring"><article id="clothing" class="whatToBring">
+                <header>What To Bring - Clothing</header>
                 
-<p>
-    Dress code is : Imagine you're going to Glastonbury / Coachella in
-    October in the UK.
-</p>
+<h4>
+    Dress code is :
+    <br/> Glastonbury Festival, with UK October weather.
+</h4>
 <p>
     Meaning you can absolutely dress up - the more fabulous or
     outrageous the better for our part - but bear in mind that it may
-    get a little cold when the sun goes down (between 23.00 and 00.00,
-    after which it starts to come back up again)
+    get a little cold.
 </p>
 
 <p>
@@ -465,6 +629,32 @@
     sun comes out and you're sunbathing on a grassy hill, put them on
     when it starts hailing. No joke, we've had both of these things
     within the space of 4 hours, in Básar, at this time of year.
+</p>
+
+            </article><article id="gifts" class="whatToBring">
+                <header>What To Bring - Gifts</header>
+                
+<h3>You showing up and partying with us is the best gift we can ask for.</h3>
+<p>We have a small apartment, that's recently been fixed up.</p>
+<p>We don't need any material presents, and honestly don't have the space for any of them either!</p> 
+<p>But if you really want to give us something, we'd love for people to get involved with the weekend. We both find it fun to get involved with events and having a task to do, so if you want to contribute to making this a little camping festival, that would be fantastic - and we should be able to find a task for anyone coming over, just get in touch.</p>
+<p>For example, we have very talented friends and family members, and there will be an ‘open-mic' on the Friday night where guests can perform a song, or a cabaret or circus act or lead guests in a group game.On the Saturday there's free time early in the day if anyone would want to lead a yoga or dance class, or even a writing workshop - and there's also space for speeches before dancing takes over.</p>
+<p>And if you don't feel like contributing in an artistic way, we might ask you to shop for us in the duty-free on your way over, help with signage or decoration, or find you a task you'd be happy with.</p>
+
+            </article><article id="clothing" class="whatToBring">
+                <header>What to bring - Sleeping Stuff</header>
+                
+<p>
+    A 3-season sleeping bag, pillow and an inflatable camping mattress
+    is all you need, even if you're in a tent - again, think
+    Glastonbury.
+</p>
+<p>
+    This also applies if you're staying in the hut (minus the
+    mattress), but a light duvet and bedding also works.
+</p>
+<p>
+    Also bearing in mind this is August in Iceland - you will get a maximum of two hours 'darkness', even inside the cabin. For some people that's an issue, and they find they'll need a sleep mask in order to nod off. Although we're confident that the mountain air and partying should ensure that falling asleep at the end of the day won't be a problem!
 </p>
 
             </article><article id="kids" class="whatToBring">
@@ -487,55 +677,124 @@
     In that case, please message us - Básar is a large campground and
     popular with families, and Þórsmörk (well, Iceland in general) is
     a great environment for kids with wide open spaces and no
-    poisounous plants or animals. The nature however can be dangerous
+    dangerous plants or animals. The nature however can be a little tricky
     (fast, deep, cold rivers and steep rock faces) so it's good to be
     prepared.
 </p>
 
-            </article><article id="clothing" class="whatToBring">
-                <header>Clothing</header>
-                
-<p>
-    A 3-season sleeping bag, pillow and an inflatable camping mattress
-    is all you need, even if you're in a tent - again, think
-    Glastonbury.
-</p>
-<p>
-    This also applies if you're staying in the hut (minus the
-    mattress), but a light duvet and bedding also works.
-</p>
-
             </article></section>
 
-        <section id="schedule"><article id="schedule-sightseeing" class="schedule">
-                <header>Before / After-wedding sightseeing</header>
+        <section id="schedule">         
+            <header>Schedule</header><article id="schedule-friday" class="schedule">
+                <h3>Friday 25th</h3>
                 
-[Tips on what to see before / after]
+<ul>
+    <li>
+        <h5>Daytime - Arrival</h5>
+        <p>People arrive in Þórsmörk, set up tents, get settled in the cabins, park their campervans, etc.</p>
+    </li>
+    <li>
+        <h5>Evening - Food &amp; Kvöldvaka</h5>
+        <p>Casual food (provided by us), drinks and kvöldvaka around the bonfire</p>
+    </li>
+</ul>
 
-            </article><article id="schedule-friday" class="schedule">
-                <header>Friday 25th</header>
-                
-[Schedule for Friday]
-
-            </article><article id="schedule-post-wedding" class="schedule">
-                <header>Post-wedding (Monday 28th onwards)</header>
-                
-[Schedule for post-wedding]
 
             </article><article id="schedule-saturday" class="schedule">
-                <header>Saturday 26th</header>
+                <h3>Saturday 26th</h3>
                 
-[Schedule for Saturday]
+<ul>
+    <li>
+        <h5>Morning - Breakfast</h5>
+        <p>(provided by us)</p>
+    </li>
+    <li>
+        <h5>13.00-14.00ish - Ceremony</h5>
+        <!-- <p>Wedding ceremony in the campsite</p> -->
+    </li>
+    <li>
+        <h5>Post-ceremony - Hike</h5>
+        <p>The couple, photographer, and whomever wants to join goes on a short hike up the mountain to take photos. Afternoon tea + light lunch for everyone else back at the campsite.</p>
+    </li>
+
+    <li>
+        <h5>Early evening - Buffet &amp; Churrasco</h5>
+        <p>(provided by us)</p>
+    </li>
+
+    <li>
+        <h5>Evening - Dancing!</h5>
+        <!-- <p>Party starts - live music and dancing, followed by DJs in the cabin until late.</p> -->
+    </li>
+
+   
+</ul>
+
 
             </article><article id="schedule-sunday" class="schedule">
-                <header>Sunday 27th</header>
+                <h3>Sunday 27th</h3>
                 
-[Schedule for Sunday]
+<ul>
+    <li>
+        <h5>Morning - Hangover Brunch</h5>
+        <p>(provided by us)</p>
+    </li>
+    <li>
+        <h5>Afternoon - Optional Departure</h5>
+        <p>Optional departure for guests - the couple will stay on for at least one more night to pack up before going back to Reykjavík</p>
+    </li>
 
-            </article><article id="schedule-presetup" class="schedule">
-                <header>Wednesday 23rd / Thursday 24th (pre-setup)</header>
+   
+</ul>
+
+            </article><article id="schedule-post-wedding" class="schedule">
+                <h3>Post-wedding (Monday 28th onwards)</h3>
                 
-[Schedule for Weds/Thursday]
+<p> 
+    We'll stay on at the campsite until at least Monday - you are all absolutely welcome to stay with us a bit longer if you wish! There's plenty of short hikes you can do from there, and lots to explore. 
+</p>
+
+<p>
+    Please bear in mind that there are very limited food facilities at the campsite, and you will need to book extra nights in the cabin, or pay for additional tent / campervan fees if you are planning on staying longer.
+</p>
+
+<p>
+    Once we return to Reykjavík, we'd love to hang out with you all in town, as we're not planning on going away on honeymoon straight away (at the moment).
+</p>
+
+            </article><article id="schedule-sightseeing" class="schedule">
+                <h3>Before / After-wedding sightseeing</h3>
+                
+<p>
+    Before &amp after the wedding, you'll be in one of the most popular regions of Iceland for things to do and see - the South Coast. 
+</p>
+<p>
+    You can get an overview of tours or places to go and check out <a href="https://guidetoiceland.is/travel-iceland/drive/south-coast">here</a>.
+</p>
+<p>
+    There's a fantastic hostel / tour base camp nearby called <a href="https://midgardbasecamp.is/">Midgard</a> who are also fantastic. You can stay there and also book things like glacier hiking, horse riding, snowmobiling, ice cave trips with them directly.
+</p>
+            </article><article id="schedule-presetup" class="schedule">
+                <h3>Wednesday 23rd / Thursday 24th (pre-setup)</h3>
+                
+<p>
+    We'll be at the campsite from at least Thursday beforehand, but more likely Wednesday or even Tuesday in order to get everything ready. If you would like to join us (and maybe even help getting things set up), we would absolutely love you to. 
+</p>
+<p>Just please bear in mind the limited food options available!</p>
+            </article></section>
+
+        <section id="rsvp"><article id="section-rsvp" class="rsvp">
+                <header>RSVP</header>
+                
+<p>
+   Please let us know if you can join us using the following Google Form :
+   <button>
+    <a href="http://www.google.com"><h3>Click here to RSVP</h3></a>
+   </button>
+</p>
+<p>
+    With any other questions, please message us or email <a href="mailto:info@huldufugl.is">info@huldufugl.is</a> - which will go to both of us.
+</p>
 
             </article></section>
        

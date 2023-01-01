@@ -25,9 +25,9 @@
     color: #bf7582; } }
 
 body, html {
-  font-family: "proxima-soft", Verdana, Geneva, sans-serif;
+  font-family: "proxima-nova", Verdana, Geneva, sans-serif;
   letter-spacing: 0.03em;
-  color: #242424; }
+  color: #313131; }
 
 h1,
 h2,
@@ -84,7 +84,7 @@ h6 {
   font-weight: bold; }
 
 a {
-  color: #717171;
+  color: #7d7d7d;
   text-decoration: none; }
   a:hover {
     border-bottom: 1px solid #6d6d6d; }
@@ -93,5 +93,4 @@ p,
 li,
 ul {
   line-height: 1.5em;
-  font-size: 1.25em;
   color: black; }

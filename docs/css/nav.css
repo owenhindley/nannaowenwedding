@@ -24,43 +24,54 @@
     color: #bf7582; } }
 
 nav {
-  margin-top: 3em;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 10em;
+  margin-left: 0;
   margin-bottom: 3em;
-  text-align: center; }
-  nav label {
-    margin-right: 1em;
-    margin-left: 1em;
-    margin-bottom: 0.5em;
-    height: 4em;
-    display: inline-block; }
-    nav label span {
-      cursor: pointer; }
-      nav label span h6 {
-        padding: 0.1em 0.3em 0.1em 0.3em;
-        border-radius: 0.1em;
-        color: black;
-        text-transform: uppercase;
-        font-weight: bolder;
-        font-size: 44px;
-        cursor: pointer;
-        transition: transform 0.2s; }
-        nav label span h6:hover {
-          transform: scale(1.1); }
-    nav label:nth-of-type(n) span h6 {
-      background-color: #f2d194;
-      color: white;
-      text-shadow: 1px 1px #bf7582; }
-    nav label input {
-      appearance: none;
-      margin-left: -1em; }
-    nav label input:checked + span {
-      border-bottom: 2px solid white; }
-  @media (max-width: 1024px) {
-    nav {
-      text-align: center; }
-      nav label {
-        height: 3em;
-        margin-left: auto;
-        margin-right: auto; }
-        nav label span {
-          font-size: 24px; } }
+  text-align: center;
+  z-index: 10;
+  background-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 1; }
+  nav #navInner {
+    margin-top: 1em; }
+    nav #navInner label {
+      margin-right: 1em;
+      margin-left: 1em;
+      height: 3em;
+      display: inline-block; }
+      nav #navInner label span {
+        cursor: pointer; }
+        nav #navInner label span h6 {
+          padding: 0.1em 0.3em 0.1em 0.3em;
+          border-radius: 0.1em;
+          color: black;
+          text-transform: uppercase;
+          font-weight: bolder;
+          font-size: 30px;
+          cursor: pointer;
+          transition: transform 0.2s; }
+          nav #navInner label span h6:hover {
+            transform: scale(1.1); }
+      nav #navInner label:nth-of-type(n) span h6 {
+        background-color: #f2d194;
+        color: white;
+        text-shadow: 1px 1px #bf7582; }
+      nav #navInner label input {
+        appearance: none;
+        margin-left: -1em; }
+      nav #navInner label input:checked + span {
+        border-bottom: 2px solid white; }
+    @media (max-width: 1024px) {
+      nav #navInner {
+        text-align: center; }
+        nav #navInner label {
+          height: 3em;
+          margin-left: auto;
+          margin-right: auto; }
+          nav #navInner label span {
+            font-size: 24px; } }

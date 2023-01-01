@@ -33,6 +33,7 @@
 <script>
 	function OnNavChange(e){
 		document.querySelector('main').className = e;
+        location.hash = "#" + e;
 	}
 
     var videoElement;
@@ -66,6 +67,35 @@
 
     <div class="container">
   
+        <nav>       
+            <div id="navInner">
+            <label onclick="OnNavChange('location')">
+                <input type="radio" name="nav" id="check-location"></input>
+                <span><h6>Location</h6></span>
+            </label>	
+            <label onclick="OnNavChange('travel')">
+                <input type="radio" name="nav" id="check-travel"></input>
+                <span><h6>Getting There</h6></span>
+            </label>	
+            <label onclick="OnNavChange('accommodation')">
+                <input type="radio" name="nav" id="check-accommodation"></input>
+                <span><h6>Accommodation</h6></span>
+            </label>	
+            <label onclick="OnNavChange('what-to-bring')">
+                <input type="radio" name="nav" id="check-what-to-bring"></input>
+                <span><h6>What To Bring</h6></span>
+            </label>
+                   
+            <label onclick="OnNavChange('schedule')">
+                <input type="radio" name="nav" id="check-schedule"></input>
+                <span><h6>Schedule</h6></span>
+            </label>	
+            <label onclick="OnNavChange('rsvp')">
+                <input type="radio" name="nav" id="check-rsvp"></input>
+                <span><h6>RSVP</h6></span>
+            </label>
+        </div>		
+        </nav>
 
     <header>
        
@@ -76,35 +106,14 @@
                 
             </h6>    
         </aside> -->
+        <img src="images/title.png"/>
         <h1>Nanna &amp; Owen</h1>        
         <h3>Are getting married</h3>
         <h6>25. 27. August 2022</h6>
     </header>
 
 
-    <nav>       
-        <label onclick="OnNavChange('location')">
-            <input type="radio" name="nav" id="check-location"></input>
-            <span><h6>Location</h6></span>
-        </label>	
-        <label onclick="OnNavChange('travel')">
-            <input type="radio" name="nav" id="check-travel"></input>
-            <span><h6>Getting There</h6></span>
-        </label>		
-        <label onclick="OnNavChange('what-to-bring')">
-            <input type="radio" name="nav" id="check-what-to-bring"></input>
-            <span><h6>What To Bring</h6></span>
-        </label>
-       		
-        <label onclick="OnNavChange('schedule')">
-            <input type="radio" name="nav" id="check-schedule"></input>
-            <span><h6>Schedule</h6></span>
-        </label>	
-        <label onclick="OnNavChange('faq')">
-            <input type="radio" name="nav" id="check-faq"></input>
-            <span><h6>FAQ</h6></span>
-        </label>		
-    </nav>
+   
 
     <main class="all">
 
@@ -114,8 +123,10 @@
         {% assign travel = collections.travel | sort: 'data.order'  %}
         {% assign whatToBring = collections.whatToBring | sort: 'data.order'  %}
         {% assign schedule = collections.schedule | sort: 'data.order'  %}
+        {% assign rsvp = collections.rsvp | sort: 'data.order'  %}
 
-        <section class="about">            
+        <section id="about">           
+        
             {%- for article in about -%}            
             <article id="{{article.data.id}}"  class="about">                
                 {{ article.templateContent}}
@@ -123,7 +134,8 @@
             {%- endfor -%}
         </section>
 
-        <section>            
+        <section id="location">    
+            
             {%- for article in location -%}            
             <article id="{{article.data.id}}" class="location">
                 <header>{{article.data.title}}</header>
@@ -132,7 +144,8 @@
             {%- endfor -%}
         </section>
 
-        <section>           
+        <section id="travel">      
+            
             {%- for article in travel -%}            
             <article id="{{article.data.id}}" class="travel">
                 <header>{{article.data.title}}</header>
@@ -140,7 +153,8 @@
             </article>
             {%- endfor -%}
         </section>
-        <section>           
+        <section id="accommodation">     
+            
             {%- for article in accommodation -%}            
             <article id="{{article.data.id}}" class="accommodation">
                 <header>{{article.data.title}}</header>
@@ -149,7 +163,8 @@
             {%- endfor -%}
         </section>
 
-        <section>          
+        <section id="what-to-bring">         
+            
             {%- for article in whatToBring -%}            
             <article id="{{article.data.id}}" class="whatToBring">
                 <header>{{article.data.title}}</header>
@@ -158,9 +173,19 @@
             {%- endfor -%}
         </section>
 
-        <section id="schedule">          
+        <section id="schedule">         
+            <header>Schedule</header>
             {%- for article in schedule -%}            
             <article id="{{article.data.id}}" class="schedule">
+                <h3>{{article.data.title}}</h3>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+
+        <section id="rsvp">      
+            {%- for article in rsvp -%}            
+            <article id="{{article.data.id}}" class="rsvp">
                 <header>{{article.data.title}}</header>
                 {{ article.templateContent}}
             </article>

@@ -7,8 +7,13 @@ body .container > header {
     // font-weight: bold;
     text-shadow: 0px 0px 2px $textColor;
 
+    img {
+        width: 100%;
+    }
+    
+
     h1, h3, h6 {
-       
+       display: none;
         text-align: center;
         text-transform: uppercase;
         

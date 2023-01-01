@@ -41,7 +41,7 @@ $borderRadius: 0.1em;
 
 // $backgroundColor:#1c1c1c;
 $backgroundColor: rgb(197, 197, 197);
-$textColor: #242424;
+$textColor: lighten(#242424, 5);
 $textColorLight: lighten($backgroundColor, 25);
 $highlightColor: darken($textColor, 20);
 
