@@ -29,6 +29,10 @@
   width: 100%;
   padding: 1em;
   margin-right: 1em; }
+  @media (max-width: 1024px) {
+    .carousel {
+      padding: 0;
+      margin: 0; } }
   .carousel .slider {
     width: 100%;
     text-align: center; }

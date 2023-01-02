@@ -33,7 +33,7 @@
 <script>
 	function OnNavChange(e){
 		document.querySelector('main').className = e;
-        location.hash = "#" + e;
+        location.hash = "#" + e + "Anchor";
 	}
 
     var videoElement;
@@ -58,11 +58,21 @@
 
 <body>
 
-    <video id="splashVideo" muted="" loop="" autoplay="" data-src="images/video/test-header-video" class="visible">
+    <!-- <video id="splashVideo" muted="" loop="" autoplay="" data-src="images/video/test-header-video" class="visible">
         <source src="images/video/temp-wedding-header-video.mp4">
         <source src="images/video/temp-wedding-header-video.webm">
         <source src="images/video/temp-wedding-header-video.m4v">
-    </video>
+    </video> -->
+    <div id="splashVideo" class="youtubeVideoContainer">
+        <iframe
+          frameborder="0"
+          height="100%"
+          width="100%"
+          src="https://youtube.com/embed/mRX0DOXdOrI?autoplay=1&controls=0&showinfo=0&playsinline=1&mute=1&loop=1"
+        >
+        </iframe>
+      </div>
+
     <div id="video-overlay"></div>
 
     <div class="container">
@@ -126,7 +136,7 @@
         {% assign rsvp = collections.rsvp | sort: 'data.order'  %}
 
         <section id="about">           
-        
+            <div id="aboutAnchor" class="navAnchor"></div>
             {%- for article in about -%}            
             <article id="{{article.data.id}}"  class="about">                
                 {{ article.templateContent}}
@@ -135,7 +145,7 @@
         </section>
 
         <section id="location">    
-            
+            <div id="locationAnchor" class="navAnchor"></div>
             {%- for article in location -%}            
             <article id="{{article.data.id}}" class="location">
                 <header>{{article.data.title}}</header>
@@ -145,7 +155,7 @@
         </section>
 
         <section id="travel">      
-            
+            <div id="travelAnchor" class="navAnchor"></div>
             {%- for article in travel -%}            
             <article id="{{article.data.id}}" class="travel">
                 <header>{{article.data.title}}</header>
@@ -154,7 +164,7 @@
             {%- endfor -%}
         </section>
         <section id="accommodation">     
-            
+            <div id="accommodationAnchor" class="navAnchor"></div>
             {%- for article in accommodation -%}            
             <article id="{{article.data.id}}" class="accommodation">
                 <header>{{article.data.title}}</header>
@@ -164,7 +174,7 @@
         </section>
 
         <section id="what-to-bring">         
-            
+            <div id="what-to-bringAnchor" class="navAnchor"></div>
             {%- for article in whatToBring -%}            
             <article id="{{article.data.id}}" class="whatToBring">
                 <header>{{article.data.title}}</header>
@@ -173,8 +183,9 @@
             {%- endfor -%}
         </section>
 
-        <section id="schedule">         
-            <header>Schedule</header>
+        <section id="schedule">     
+            <div id="scheduleAnchor" class="navAnchor"></div>    
+            <header>Rough Schedule - To Be Confirmed</header>
             {%- for article in schedule -%}            
             <article id="{{article.data.id}}" class="schedule">
                 <h3>{{article.data.title}}</h3>
@@ -183,7 +194,8 @@
             {%- endfor -%}
         </section>
 
-        <section id="rsvp">      
+        <section id="rsvp">    
+            <div id="rsvpAnchor" class="navAnchor"></div>    
             {%- for article in rsvp -%}            
             <article id="{{article.data.id}}" class="rsvp">
                 <header>{{article.data.title}}</header>

@@ -3,21 +3,20 @@
 nav {
     position: fixed;
     width: 100%;
-    left:0;
-    top:0;
-    height:10em;
+    left: 0;
+    top: 0;
+    height: 10em;
     margin-left: 0;
     // margin-top: 3em;
     margin-bottom: 3em;
     text-align: center;
     z-index: 10;
 
-    background-image: 
-        linear-gradient(
-            to top,
-            transparent 0%,
-            rgba(0, 0, 0, 0.2) 100%
-        );
+    background-image: linear-gradient(
+        to top,
+        transparent 0%,
+        rgba(0, 0, 0, 0.2) 100%
+    );
     background-size: 100% 100%;
     background-repeat: no-repeat;
     opacity: 1;
@@ -39,7 +38,6 @@ nav {
                 h6 {
                     padding: 0.1em 0.3em 0.1em 0.3em;
 
-
                     border-radius: $borderRadius;
                     color: black;
                     // font-family: 'Josefin Sans';
@@ -53,17 +51,11 @@ nav {
                     &:hover {
                         transform: scale(1.1);
                     }
+
+                    background-color: $cm;
+                    color: $textColorLight;
+                    text-shadow: 1px 1px $ca;
                 }
-
-
-
-
-            }
-
-            &:nth-of-type(n) span h6 {
-                background-color: $cm;
-                color: $textColorLight;
-                text-shadow: 1px 1px $ca;
             }
 
             // &:nth-of-type(2n + 1) span h6 {
@@ -85,7 +77,7 @@ nav {
                 margin-left: -1em;
             }
 
-            input:checked+span {
+            input:checked + span {
                 // background-color: $backgroundColor;
                 // border: 2px solid white;
                 // color: $textColor;
@@ -104,6 +96,34 @@ nav {
 
                 span {
                     font-size: 24px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 100vw;
+        background: black;
+
+        #navInner {
+            clear: both;
+            margin: 0;
+            label {
+                height: 1.5em;
+                display: block;
+                span {
+                    font-size: 1em;
+
+                    background-color: transparent;
+                    color: $textColorLight;
+
+                    h6 {
+                        font-size: 1em;
+                        background-color: transparent;
+                        padding: 0;
+                        position: relative;
+                        top: -1em;
+                    }
                 }
             }
         }

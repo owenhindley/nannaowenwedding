@@ -54,13 +54,12 @@ nav {
           font-weight: bolder;
           font-size: 30px;
           cursor: pointer;
-          transition: transform 0.2s; }
+          transition: transform 0.2s;
+          background-color: #f2d194;
+          color: white;
+          text-shadow: 1px 1px #bf7582; }
           nav #navInner label span h6:hover {
             transform: scale(1.1); }
-      nav #navInner label:nth-of-type(n) span h6 {
-        background-color: #f2d194;
-        color: white;
-        text-shadow: 1px 1px #bf7582; }
       nav #navInner label input {
         appearance: none;
         margin-left: -1em; }
@@ -75,3 +74,23 @@ nav {
           margin-right: auto; }
           nav #navInner label span {
             font-size: 24px; } }
+  @media (max-width: 1024px) {
+    nav {
+      width: 100vw;
+      background: black; }
+      nav #navInner {
+        clear: both;
+        margin: 0; }
+        nav #navInner label {
+          height: 1.5em;
+          display: block; }
+          nav #navInner label span {
+            font-size: 1em;
+            background-color: transparent;
+            color: white; }
+            nav #navInner label span h6 {
+              font-size: 1em;
+              background-color: transparent;
+              padding: 0;
+              position: relative;
+              top: -1em; } }

@@ -24,7 +24,8 @@
   100% {
     color: #bf7582; } }
 
-body, html {
+body,
+html {
   font-family: "proxima-nova", Verdana, Geneva, sans-serif;
   letter-spacing: 0.03em;
   color: #313131; }
@@ -64,8 +65,7 @@ h1 {
   font-size: 64px; }
 
 h2 {
-  font-size: 64px;
-  clear: none; }
+  font-size: 64px; }
 
 h3 {
   font-size: 42px; }
@@ -94,3 +94,15 @@ li,
 ul {
   line-height: 1.5em;
   color: black; }
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 48px; }
+  h2 {
+    font-size: 48px; }
+  h3 {
+    font-size: 27px; }
+  h4 {
+    font-size: 24px; }
+  h5 {
+    font-size: 20px; } }

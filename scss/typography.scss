@@ -1,16 +1,14 @@
 @import './colours.scss';
 
-
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
-
-
 
 $bodyFont: 'proxima-nova', Verdana, Geneva, sans-serif;
 $titleFont: 'rig-solid-bold-fill', Verdana, Geneva, sans-serif;
-$headerFont: 'bd-supper', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headerFont: 'bd-supper', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
 
-
-body, html {
+body,
+html {
     font-family: $bodyFont;
     letter-spacing: 0.03em;
     color: $textColor;
@@ -28,7 +26,6 @@ header {
 
 h5,
 h6 {
-
     font-family: $headerFont;
     font-weight: normal;
     letter-spacing: 0.02em;
@@ -58,7 +55,6 @@ h1 {
 
 h2 {
     font-size: 64px;
-    clear: none;
 }
 
 h3 {
@@ -96,4 +92,27 @@ ul {
     line-height: 1.5em;
     // font-size: 1.25em;
     color: darken($textColor, 20);
+}
+
+// MOBILE
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    h3 {
+        font-size: 27px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
 }

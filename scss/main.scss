@@ -20,7 +20,7 @@ html {
     // background-attachment: fixed;
 
     background-color: $cm;
-    
+
     width: 100%;
 
     margin: 0;
@@ -28,6 +28,8 @@ html {
 
     height: 100%;
     position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .container {
@@ -45,12 +47,6 @@ html {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-
-    @media (max-width: 1024px) {
-        margin-left: 1em;
-        margin-right: 1em;
-        width: calc(100% - 2em);
-    }
 }
 
 #splashVideo,
@@ -65,21 +61,64 @@ html {
     opacity: 1;
     z-index: 0;
 }
+.youtubeVideoContainer {
+    width: 100vw;
+    height: 100vh;
+
+    iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .youtubeVideoContainer iframe {
+        /* height = 100 * (9 / 16) = 56.25 */
+        height: 56.25vw;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .youtubeVideoContainer iframe {
+        /* width = 100 / (9 / 16) = 177.777777 */
+        width: 177.78vh;
+    }
+}
+
 #video-overlay {
-    // background-image: url(),
-    //     linear-gradient(
-    //         to bottom,
-    //         transparent 0%,
-    //         rgba(197, 197, 197, 0.2) 75%,
-    //         $backgroundColor 100%
-    //     );
-    // background-size: 2px 2px, 100% 100%;
-    // background-repeat: repeat, no-repeat;
     opacity: 1;
 }
 
 @media (max-width: 1024px) {
-    #splashVideo {
+    #splashVideo,
+    #video-overlay {
         display: none;
     }
+    .container {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        width: calc(100% - 1em);
+    }
+
+    body .container > header {
+        height: 60vh;
+        background-image: url('../images/location/location-titleBG.jpg');
+        background-position: 50% 50%;
+        background-size: cover;
+        margin-top: 6em;
+        margin-bottom: 0;
+
+        img {
+            margin-top: 20vh;
+        }
+    }
+}
+
+.navAnchor {
+    position: relative;
+    top: -25vh;
 }

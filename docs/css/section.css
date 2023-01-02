@@ -140,10 +140,57 @@ section {
           text-shadow: 1px 1px #bf7582; }
   section#schedule {
     overflow: hidden; }
-    section#schedule article:nth-of-type(-n+3) {
+    section#schedule article:nth-of-type(-n + 3) {
       clear: none;
       float: left;
       width: 33%; }
-    section#schedule p, section#schedule ul {
+    section#schedule p,
+    section#schedule ul {
       margin-bottom: 0.5em;
       font-size: 1.1em; }
+  @media (max-width: 1024px) {
+    section header {
+      font-size: 2rem;
+      margin-left: -1em;
+      padding-left: 1em; }
+    section p,
+    section ul {
+      font-size: 1em;
+      margin-bottom: 0.75em; }
+    section ul {
+      padding-left: 1em; }
+    section .www-container .www {
+      width: 100%; }
+    section .www-buttons a {
+      width: 100%; }
+    section#schedule {
+      overflow: hidden; }
+      section#schedule article:nth-of-type(-n + 3) {
+        clear: none;
+        float: left;
+        width: 50%;
+        text-align: center; }
+      section#schedule p,
+      section#schedule ul {
+        margin-bottom: 0.5em;
+        font-size: 0.8em;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 1em;
+        list-style: none; }
+    section img.floatLeft {
+      width: 60%;
+      float: left;
+      margin-right: 1.5em;
+      margin-left: -2em; }
+    section img.floatRight {
+      width: 60%;
+      float: right;
+      margin-left: 1.5em;
+      margin-right: -2em; }
+    section img.double {
+      width: 49.5%;
+      float: left; }
+    section img.triple {
+      width: 33.3%;
+      float: left; } }

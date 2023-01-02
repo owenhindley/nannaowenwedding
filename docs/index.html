@@ -33,7 +33,7 @@
 <script>
 	function OnNavChange(e){
 		document.querySelector('main').className = e;
-        location.hash = "#" + e;
+        location.hash = "#" + e + "Anchor";
 	}
 
     var videoElement;
@@ -58,11 +58,21 @@
 
 <body>
 
-    <video id="splashVideo" muted="" loop="" autoplay="" data-src="images/video/test-header-video" class="visible">
+    <!-- <video id="splashVideo" muted="" loop="" autoplay="" data-src="images/video/test-header-video" class="visible">
         <source src="images/video/temp-wedding-header-video.mp4">
         <source src="images/video/temp-wedding-header-video.webm">
         <source src="images/video/temp-wedding-header-video.m4v">
-    </video>
+    </video> -->
+    <div id="splashVideo" class="youtubeVideoContainer">
+        <iframe
+          frameborder="0"
+          height="100%"
+          width="100%"
+          src="https://youtube.com/embed/mRX0DOXdOrI?autoplay=1&controls=0&showinfo=0&playsinline=1&mute=1&loop=1"
+        >
+        </iframe>
+      </div>
+
     <div id="video-overlay"></div>
 
     <div class="container">
@@ -125,7 +135,8 @@
         
         
 
-        <section id="about"><article id="what-where-when"  class="about">                
+        <section id="about">           
+            <div id="aboutAnchor" class="navAnchor"></div><article id="what-where-when"  class="about">                
                 <div class="www-container">
 <div class="www">
     <header>What</header>
@@ -196,7 +207,8 @@
 
             </article></section>
 
-        <section id="location"><article id="section-location" class="location">
+        <section id="location">    
+            <div id="locationAnchor" class="navAnchor"></div><article id="section-location" class="location">
                 <header>The Location - Básar, Þórsmörk</header>
                 
 
@@ -319,7 +331,8 @@ There's a saying in Iceland: "If you don't like the weather, just wait 5 minutes
 Temperature may range from anything between 5°C-25°C, but one thing is for certain - <strong>there will be daylight until close to midnight, and darkness will only last for about 2-3 hours.</strong></p>
             </article></section>
 
-        <section id="travel"><article id="section-byAir" class="travel">
+        <section id="travel">      
+            <div id="travelAnchor" class="navAnchor"></div><article id="section-byAir" class="travel">
                 <header>Getting to Iceland - By Air</header>
                 <h4>
     If you don't already live in Iceland, it's very likely you'll need
@@ -395,40 +408,6 @@ Temperature may range from anything between 5°C-25°C, but one thing is for cer
 </p>
 <br/>
 
-            </article><article id="section-byFoot" class="travel">
-                <header>Bonus - Hiking to Þórsmörk Básar</header>
-                
-<h4>
-    Þórsmörk is the finishing point for two of Iceland's most popular
-    hikes, Laugavegur (3-4 days) and Fimmvörðuháls (1 day).
-</h4>
-<br/>
-<img src="images/travel/hiking-0.jpg" class="floatRight"/>
-<p>
-    <em>Owen walked Fimmvörðuháls with Nanna on his very
-        first trip to Iceland, which is the main reason why we wanted
-        to hold the wedding here.</em
-    >
-    </p>
-<img src="images/travel/hiking-1.jpg" class="floatLeft"/>
-<p>
-    So if you want to be super adventurous, you'd arrive in Reykjavik, and then book travel to either Landmannalaugar (hot springs and pink mountains) for the 3-4 day Laugavegur hike, or Skogarfoss (big-ass waterfall) for the 1 day Fimmvörðuháls hike.
-</p>
-<h5>Laugavegur info : <a href="https://www.fi.is/en/hiking-trails/trails/laugavegur">link</a></h5>
-<h5>Fimmvörðuháls info : <a href="https://www.fi.is/en/hiking-trails/trails/fimmvorduhals">link</a></h5>
-<br/>
-<p>
-    Some of you have already expressed an interest in hiking to the
-    venue - and we can transport anything you don't need for the hike
-    directly to the venue (like your tents, if you stay in the huts
-    along the way).
-</p>
-<h4>
-    Just message us if you're interested, and we'll tell you all you
-    need to know, as well as connecting you with other people who want
-    to do the same.
-</h4>
-
             </article><article id="section-bySea" class="travel">
                 <header>Low Carbon Option - Travel By Sea</header>
                 
@@ -467,8 +446,43 @@ Temperature may range from anything between 5°C-25°C, but one thing is for cer
     we'd reccommend spending at least 2-3 days.
 </p>
 
+            </article><article id="section-byFoot" class="travel">
+                <header>Bonus - Hiking to Þórsmörk Básar</header>
+                
+<h4>
+    Þórsmörk is the finishing point for two of Iceland's most popular
+    hikes, Laugavegur (3-4 days) and Fimmvörðuháls (1 day).
+</h4>
+<br/>
+<img src="images/travel/hiking-0.jpg" class="floatRight"/>
+<p>
+    <em>Owen walked Fimmvörðuháls with Nanna on his very
+        first trip to Iceland, which is the main reason why we wanted
+        to hold the wedding here.</em
+    >
+    </p>
+<img src="images/travel/hiking-1.jpg" class="floatLeft"/>
+<p>
+    So if you want to be super adventurous, you'd arrive in Reykjavik, and then book travel to either Landmannalaugar (hot springs and pink mountains) for the 3-4 day Laugavegur hike, or Skogarfoss (big-ass waterfall) for the 1 day Fimmvörðuháls hike.
+</p>
+<h5>Laugavegur info : <a href="https://www.fi.is/en/hiking-trails/trails/laugavegur">link</a></h5>
+<h5>Fimmvörðuháls info : <a href="https://www.fi.is/en/hiking-trails/trails/fimmvorduhals">link</a></h5>
+<br/>
+<p>
+    Some of you have already expressed an interest in hiking to the
+    venue - and we can transport anything you don't need for the hike
+    directly to the venue (like your tents, if you stay in the huts
+    along the way).
+</p>
+<h4>
+    Just message us if you're interested, and we'll tell you all you
+    need to know, as well as connecting you with other people who want
+    to do the same.
+</h4>
+
             </article></section>
-        <section id="accommodation"><article id="section-accommodation" class="accommodation">
+        <section id="accommodation">     
+            <div id="accommodationAnchor" class="navAnchor"></div><article id="section-accommodation" class="accommodation">
                 <header>Accommodation</header>
                 
 <p>
@@ -600,7 +614,8 @@ Temperature may range from anything between 5°C-25°C, but one thing is for cer
 
             </article></section>
 
-        <section id="what-to-bring"><article id="clothing" class="whatToBring">
+        <section id="what-to-bring">         
+            <div id="what-to-bringAnchor" class="navAnchor"></div><article id="clothing" class="whatToBring">
                 <header>What To Bring - Clothing</header>
                 
 <h4>
@@ -684,8 +699,9 @@ Temperature may range from anything between 5°C-25°C, but one thing is for cer
 
             </article></section>
 
-        <section id="schedule">         
-            <header>Schedule</header><article id="schedule-friday" class="schedule">
+        <section id="schedule">     
+            <div id="scheduleAnchor" class="navAnchor"></div>    
+            <header>Rough Schedule - To Be Confirmed</header><article id="schedule-friday" class="schedule">
                 <h3>Friday 25th</h3>
                 
 <ul>
@@ -709,12 +725,19 @@ Temperature may range from anything between 5°C-25°C, but one thing is for cer
         <p>(provided by us)</p>
     </li>
     <li>
-        <h5>13.00-14.00ish - Ceremony</h5>
-        <!-- <p>Wedding ceremony in the campsite</p> -->
+        <h5>Midday - Ceremony</h5>
+        <p>
+            The bit you all came to see - Wedding ceremony in the
+            campsite.
+        </p>
     </li>
     <li>
         <h5>Post-ceremony - Hike</h5>
-        <p>The couple, photographer, and whomever wants to join goes on a short hike up the mountain to take photos. Afternoon tea + light lunch for everyone else back at the campsite.</p>
+        <p>
+            The couple, photographer, and whomever wants to join goes
+            on a short hike up the mountain to take photos. Afternoon
+            tea + light lunch for everyone else back at the campsite.
+        </p>
     </li>
 
     <li>
@@ -726,10 +749,7 @@ Temperature may range from anything between 5°C-25°C, but one thing is for cer
         <h5>Evening - Dancing!</h5>
         <!-- <p>Party starts - live music and dancing, followed by DJs in the cabin until late.</p> -->
     </li>
-
-   
 </ul>
-
 
             </article><article id="schedule-sunday" class="schedule">
                 <h3>Sunday 27th</h3>
@@ -762,6 +782,13 @@ Temperature may range from anything between 5°C-25°C, but one thing is for cer
     Once we return to Reykjavík, we'd love to hang out with you all in town, as we're not planning on going away on honeymoon straight away (at the moment).
 </p>
 
+            </article><article id="schedule-presetup" class="schedule">
+                <h3>Wednesday 23rd / Thursday 24th (pre-setup)</h3>
+                
+<p>
+    We'll be at the campsite from at least Thursday beforehand, but more likely Wednesday or even Tuesday in order to get everything ready. If you would like to join us (and maybe even help getting things set up), we would absolutely love you to. 
+</p>
+<p>Just please bear in mind the limited food options available!</p>
             </article><article id="schedule-sightseeing" class="schedule">
                 <h3>Before / After-wedding sightseeing</h3>
                 
@@ -774,16 +801,10 @@ Temperature may range from anything between 5°C-25°C, but one thing is for cer
 <p>
     There's a fantastic hostel / tour base camp nearby called <a href="https://midgardbasecamp.is/">Midgard</a> who are also fantastic. You can stay there and also book things like glacier hiking, horse riding, snowmobiling, ice cave trips with them directly.
 </p>
-            </article><article id="schedule-presetup" class="schedule">
-                <h3>Wednesday 23rd / Thursday 24th (pre-setup)</h3>
-                
-<p>
-    We'll be at the campsite from at least Thursday beforehand, but more likely Wednesday or even Tuesday in order to get everything ready. If you would like to join us (and maybe even help getting things set up), we would absolutely love you to. 
-</p>
-<p>Just please bear in mind the limited food options available!</p>
             </article></section>
 
-        <section id="rsvp"><article id="section-rsvp" class="rsvp">
+        <section id="rsvp">    
+            <div id="rsvpAnchor" class="navAnchor"></div><article id="section-rsvp" class="rsvp">
                 <header>RSVP</header>
                 
 <p>
