@@ -29,6 +29,17 @@
   width: 100%;
   padding: 1em;
   margin-right: 1em; }
+  .carousel.floatLeft {
+    width: 50%;
+    margin-left: -3em; }
+    .carousel.floatLeft .slides > div {
+      height: 350px; }
+  .carousel.floatRight {
+    width: 50%;
+    float: right;
+    margin-right: -3em; }
+    .carousel.floatRight .slides > div {
+      height: 350px; }
   @media (max-width: 1024px) {
     .carousel {
       padding: 0;
