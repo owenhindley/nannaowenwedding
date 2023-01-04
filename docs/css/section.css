@@ -102,6 +102,8 @@ section {
     section img.triple {
       width: 33.3%;
       float: left; }
+    section img.small {
+      width: 40%; }
   section .www-container {
     width: 100%;
     overflow: hidden; }
