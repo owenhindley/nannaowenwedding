@@ -27,8 +27,8 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 <!-- <link rel="stylesheet" href="https://use.typekit.net/bio5jjx.css"> -->
 
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/main.css">
 
 <script>
 	function OnNavChange(e){
@@ -48,6 +48,7 @@
             videoElement.style.opacity = opacity;
         });
 
+        
 
     });
     
@@ -56,7 +57,7 @@
 
 
 
-<body>
+<body class="en">
 
     <!-- <video id="splashVideo" muted="" loop="" autoplay="" data-src="images/video/test-header-video" class="visible">
         <source src="images/video/temp-wedding-header-video.mp4">
@@ -81,24 +82,24 @@
             <div id="navInner">
             <label onclick="OnNavChange('location')">
                 <input type="radio" name="nav" id="check-location"></input>
-                <span><h6>Location</h6></span>
+                <span><h6 class="en">Location</h6></span>
             </label>	
             <label onclick="OnNavChange('travel')">
                 <input type="radio" name="nav" id="check-travel"></input>
-                <span><h6>Getting There</h6></span>
+                <span><h6 class="en">Getting There</h6></span>
             </label>	
             <label onclick="OnNavChange('accommodation')">
                 <input type="radio" name="nav" id="check-accommodation"></input>
-                <span><h6>Accommodation</h6></span>
+                <span><h6 class="en">Accommodation</h6></span>
             </label>	
             <label onclick="OnNavChange('what-to-bring')">
                 <input type="radio" name="nav" id="check-what-to-bring"></input>
-                <span><h6>What To Bring</h6></span>
+                <span><h6 class="en">What To Bring</h6></span>
             </label>
                    
             <label onclick="OnNavChange('schedule')">
                 <input type="radio" name="nav" id="check-schedule"></input>
-                <span><h6>Schedule</h6></span>
+                <span><h6 class="en">Schedule</h6></span>
             </label>	
             <label onclick="OnNavChange('rsvp')">
                 <input type="radio" name="nav" id="check-rsvp"></input>
@@ -110,6 +111,7 @@
     <header>
        
         
+        
        
         <!-- <aside>
                 <p>25th - 27th August 2023<br/>
@@ -117,7 +119,7 @@
                 
             </h6>    
         </aside> -->
-        <img src="images/title.png"/>
+        <img src="../images/title-en.png"/>
         <h1>Nanna &amp; Owen</h1>        
         <h3>Are getting married</h3>
         <h6>25. 27. August 2022</h6>
@@ -128,13 +130,13 @@
 
     <main class="all">
 
-        {% assign about = collections.about | sort: 'data.order'  %}
-        {% assign location = collections.location | sort: 'data.order'  %}
-        {% assign accommodation = collections.accommodation | sort: 'data.order'  %}
-        {% assign travel = collections.travel | sort: 'data.order'  %}
-        {% assign whatToBring = collections.whatToBring | sort: 'data.order'  %}
-        {% assign schedule = collections.schedule | sort: 'data.order'  %}
-        {% assign rsvp = collections.rsvp | sort: 'data.order'  %}
+        {% assign about = collections.about | sort: 'data.order' | where : "data.language", "en"   %}
+        {% assign location = collections.location | sort: 'data.order' | where : "data.language", "en"  %}
+        {% assign accommodation = collections.accommodation | sort: 'data.order' | where : "data.language", "en"  %}
+        {% assign travel = collections.travel | sort: 'data.order' | where : "data.language", "en"  %}
+        {% assign whatToBring = collections.whatToBring | sort: 'data.order' | where : "data.language", "en"  %}
+        {% assign schedule = collections.schedule | sort: 'data.order' | where : "data.language", "en"  %}
+        {% assign rsvp = collections.rsvp | sort: 'data.order' | where : "data.language", "en"  %}
 
         <section id="about">           
             <div id="aboutAnchor" class="navAnchor"></div>
@@ -143,6 +145,7 @@
                 {{ article.templateContent}}
             </article>
             {%- endfor -%}
+
         </section>
 
         <section id="location">    
@@ -186,7 +189,7 @@
 
         <section id="schedule">     
             <div id="scheduleAnchor" class="navAnchor"></div>    
-            <header>Rough Schedule - To Be Confirmed</header>
+            <header>Schedule - To Be Confirmed</header>
             {%- for article in schedule -%}            
             <article id="{{article.data.id}}" class="schedule">
                 <h3>{{article.data.title}}</h3>

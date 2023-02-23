@@ -351,6 +351,9 @@ section {
     min-height: 100% !important;
     margin-bottom: 2em;
     clear: both; }
+    section article p ul {
+      margin-top: 0;
+      margin-bottom: 0; }
   section button {
     border-radius: 0.1em;
     padding: 1em;
@@ -608,6 +611,16 @@ html {
   position: absolute;
   left: 0;
   top: 0; }
+
+body .en,
+body .is {
+  display: none; }
+
+body.en .en {
+  display: block; }
+
+body.is .is {
+  display: block; }
 
 .container {
   z-index: 2;

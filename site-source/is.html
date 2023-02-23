@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+<title>Nanna+Owen 2023</title>
+<meta name="description"
+	content="Nanna and Owen are getting married!">
+<meta name="author" content="Owen Hindley">
+<meta property="og:url" content="http://www.nannaowen.com">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nanna+Owen 2023">
+<meta property="og:description"
+	content="Nanna and Owen are getting married!">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nanna+Owen 2023">
+<meta name="twitter:description"
+	content="Nanna and Owen are getting married!">
+
+<!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.typekit.net/rda3kzc.css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" href="https://use.typekit.net/bio5jjx.css"> -->
+
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/main.css">
+
+<script>
+	function OnNavChange(e){
+		document.querySelector('main').className = e;
+        location.hash = "#" + e + "Anchor";
+	}
+
+    var videoElement;
+    document.addEventListener("DOMContentLoaded", function(){
+        videoElement = document.getElementById('splashVideo');
+        document.addEventListener('scroll', (e)=>{
+            var opacity =  0.0;
+            if (window.scrollY < videoElement.offsetHeight) {
+                opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
+            }
+            opacity = Math.max(0.0, opacity);
+            videoElement.style.opacity = opacity;
+        });
+
+        
+
+    });
+    
+   
+</script>
+
+
+
+<body class="is">
+
+    <!-- <video id="splashVideo" muted="" loop="" autoplay="" data-src="images/video/test-header-video" class="visible">
+        <source src="images/video/temp-wedding-header-video.mp4">
+        <source src="images/video/temp-wedding-header-video.webm">
+        <source src="images/video/temp-wedding-header-video.m4v">
+    </video> -->
+    <div id="splashVideo" class="youtubeVideoContainer">
+        <iframe
+          frameborder="0"
+          height="100%"
+          width="100%"
+          src="https://youtube.com/embed/mRX0DOXdOrI?autoplay=1&controls=0&showinfo=0&playsinline=1&mute=1&loop=1&rel=0&list=PLeeXFvKsxB3DWqhlaXKFydaWgwK1Pi6Sn"
+        >
+        </iframe>
+      </div>
+
+    <div id="video-overlay"></div>
+
+    <div class="container">
+  
+        <nav>       
+            <div id="navInner">
+            <label onclick="OnNavChange('location')">
+                <input type="radio" name="nav" id="check-location"></input>
+                <span><h6 class="is">Staðsetning</h6></span>
+            </label>	
+            <label onclick="OnNavChange('travel')">
+                <input type="radio" name="nav" id="check-travel"></input>
+                <span><h6 class="is">Samgöngur</h6></span>
+            </label>	
+            <label onclick="OnNavChange('accommodation')">
+                <input type="radio" name="nav" id="check-accommodation"></input>
+                <span><h6 class="is">Gistimátar</h6></span>
+            </label>	
+            <label onclick="OnNavChange('what-to-bring')">
+                <input type="radio" name="nav" id="check-what-to-bring"></input>
+                <span><h6 class="is">Hvað þarf að koma með?</h6></span>
+            </label>
+                   
+            <label onclick="OnNavChange('schedule')">
+                <input type="radio" name="nav" id="check-schedule"></input>
+                <span><h6 class="is">Dagskrá</h6></span>
+            </label>	
+            <label onclick="OnNavChange('rsvp')">
+                <input type="radio" name="nav" id="check-rsvp"></input>
+                <span><h6>RSVP</h6></span>
+            </label>
+        </div>		
+        </nav>
+
+    <header>
+       
+        
+       
+        <!-- <aside>
+                <p>25th - 27th August 2023<br/>
+                Þórsmörk, South Iceland</p>
+                
+            </h6>    
+        </aside> -->
+        <img src="images/title-en.png"/>
+        <h1>Nanna &amp; Owen</h1>        
+        <h3>Are getting married</h3>
+        <h6>25. 27. August 2022</h6>
+    </header>
+
+
+
+    
+
+    <main class="all">
+
+        {% assign about = collections.about | sort: 'data.order' | where : "data.language", "is"   %}
+        {% assign location = collections.location | sort: 'data.order' | where : "data.language", "is"  %}
+        {% assign accommodation = collections.accommodation | sort: 'data.order' | where : "data.language", "is"  %}
+        {% assign travel = collections.travel | sort: 'data.order' | where : "data.language", "is"  %}
+        {% assign whatToBring = collections.whatToBring | sort: 'data.order' | where : "data.language", "is"  %}
+        {% assign schedule = collections.schedule | sort: 'data.order' | where : "data.language", "is"  %}
+        {% assign rsvp = collections.rsvp | sort: 'data.order' | where : "data.language", "is"  %}
+
+        <section id="about">           
+            <div id="aboutAnchor" class="navAnchor"></div>
+            {%- for article in about -%}            
+            <article id="{{article.data.id}}"  class="about">                
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+
+        </section>
+
+        <section id="location">    
+            <div id="locationAnchor" class="navAnchor"></div>
+            {%- for article in location -%}            
+            <article id="{{article.data.id}}" class="location">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+
+        <section id="travel">      
+            <div id="travelAnchor" class="navAnchor"></div>
+            {%- for article in travel -%}            
+            <article id="{{article.data.id}}" class="travel">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+        <section id="accommodation">     
+            <div id="accommodationAnchor" class="navAnchor"></div>
+            {%- for article in accommodation -%}            
+            <article id="{{article.data.id}}" class="accommodation">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+
+        <section id="what-to-bring">         
+            <div id="what-to-bringAnchor" class="navAnchor"></div>
+            {%- for article in whatToBring -%}            
+            <article id="{{article.data.id}}" class="whatToBring">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+
+        <section id="schedule">     
+            <div id="scheduleAnchor" class="navAnchor"></div>    
+            <header>Dagskrá</header>
+            {%- for article in schedule -%}            
+            <article id="{{article.data.id}}" class="schedule">
+                <h3>{{article.data.title}}</h3>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+
+        <section id="rsvp">    
+            <div id="rsvpAnchor" class="navAnchor"></div>    
+            {%- for article in rsvp -%}            
+            <article id="{{article.data.id}}" class="rsvp">
+                <header>{{article.data.title}}</header>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+       
+
+
+       
+
+    </main>
+    <footer>
+        <p>Nanna &amp; Owen, 2023</p>
+
+    </footer>
+
+</div>
+</body>
+
+ 
