@@ -39,13 +39,18 @@
     var videoElement;
     document.addEventListener("DOMContentLoaded", function(){
         videoElement = document.getElementById('splashVideo');
+        backgroundImage = document.getElementById('backgroundImage');
         document.addEventListener('scroll', (e)=>{
             var opacity =  0.0;
-            if (window.scrollY < videoElement.offsetHeight) {
-                opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
-            }
-            opacity = Math.max(0.0, opacity);
-            videoElement.style.opacity = opacity;
+            opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
+            // if (window.scrollY < videoElement.offsetHeight) {
+                
+            // }
+            
+
+            videoElement.style.opacity =  Math.max(0.0, opacity);
+            // videoElement.style.display = opacity > 0.0 ? "block" : "none";
+            backgroundImage.style.opacity = Math.min(1.0, (1.0 - (opacity + 1.0))) * 0.2;
         });
 
         
@@ -74,6 +79,9 @@
         </iframe>
       </div>
 
+      <div id="backgroundImage">
+
+      </div>
     <div id="video-overlay"></div>
 
     <div class="container">
@@ -101,10 +109,10 @@
                 <input type="radio" name="nav" id="check-schedule"></input>
                 <span><h6 class="is">Dagskrá</h6></span>
             </label>	
-            <label onclick="OnNavChange('rsvp')">
+            <!-- <label onclick="OnNavChange('rsvp')">
                 <input type="radio" name="nav" id="check-rsvp"></input>
                 <span><h6>RSVP</h6></span>
-            </label>
+            </label> -->
             <label onclick="document.location.href = document.location.href.replace('/is/', '/en/')">
                 <span><h6><img src="../images/flag-gb.svg" style="width:35px" alt="EN"/></h6></span>
             </label>
@@ -144,17 +152,15 @@
         <section id="about">           
             <div id="aboutAnchor" class="navAnchor"></div><article id="what-where-when"  class="about">                
                 
-<div class="www-container">
-	<div class="www">
+<div class="trio-container">
+	<div class="trio">
 		<header>Hvað</header>
-		<h5>
-			Nanna og Owen <br/>eru að gifta sig (aftur*) ! <br />
-		</h5>
-		
+		<h5>Nanna og Owen <br />eru að gifta sig (aftur*) ! <br /></h5>
+
 		<p>Vinsamlegast staðfestið komu hér fyrir neðan, fyrir 1. apríl 2023</p>
 	</div>
 
-	<div class="www">
+	<div class="trio">
 		<header>Hvenær</header>
 		<h5>25.-27. ágúst 2023<br /></h5>
 		<br />
@@ -163,15 +169,16 @@
 		</p>
 	</div>
 
-	<div class="www">
+	<div class="trio">
 		<header>Hvar</header>
 		<h5>Þórsmörk / Básar</h5>
-		<br/>
-		<p>Við viljum fagna með þér á
-			einum af uppáhalds stöðunum okkar í heiminum!</p>
+		<br />
+		<p>
+			Við viljum fagna með þér á einum af uppáhalds stöðunum okkar í heiminum!
+		</p>
 	</div>
 </div>
-<div class="www-buttons">
+<div class="trio-buttons">
 	<a
 		href="https://docs.google.com/forms/d/e/1FAIpQLSfn4WlQqnfGjmAWBRU-O0Gfw7cgSV_AbzRlKnMzv-FTbAaKFw/viewform?usp=sf_link"
 		target="_blank"
@@ -206,12 +213,9 @@
 <p>
 	Nanna lærði með öðrum Íslendingi, Brynju, sem byrjaði með Ragnari. (Þau eru
 	enn saman, eiga saman barn í dag og hýsa Nönnu og Owen í hvert skipti sem þau
-	heimsækja London).
-</p>
-<p>
-	Árið 2012, um það leyti sem Owen og Ragnar áttu afmæli, voru þeir með bíókvöld
-	heima hjá sér og Brynja tók Nönnu með sér þangað. Nanna daðraði við Owen allt
-	kvöldið, en hann tók ekkert eftir því. Týpískur Breti.
+	heimsækja London). Árið 2012, um það leyti sem Owen og Ragnar áttu afmæli,
+	voru þeir með bíókvöld heima hjá sér og Brynja tók Nönnu með sér þangað. Nanna
+	daðraði við Owen allt kvöldið, en hann tók ekkert eftir því. Týpískur Breti.
 </p>
 <p>
 	2 mánuðum síðar var Owen dreginn með í íslenskt Eurovision partý á pöbb í
@@ -360,7 +364,7 @@
                 <header>Veðrið</header>
                 
 <h3>Þetta er Ísland, við stjórnum víst ekki veðrinu.</h3>
-<img src="../images/weather/weather-1.jpg" class="floatRight small" />
+<img src="../images/weather/weather-1.jpg" class="floatRight" />
 <!-- <img src="../images/what-to-wear/volcano.jpg" class="floatLeft small" /> -->
 <p>
 	Básar er umkringt fjöllum og oft er skjól þar og Þórsmörk er rómuð fyrir
@@ -380,18 +384,18 @@
             <div id="travelAnchor" class="navAnchor"></div><article id="section-byAir" class="travel">
                 <header>Samgöngur - Með flugi + keyrsla</header>
                 
+<img src="../images/travel/iceland-map-annotated.jpeg" class="floatRight" />
 <h4>
 	Þar sem þetta er skrifað á íslensku þá eru stórgóðar líkur á því að þú þurfir
 	ekki að fljúga til Íslands, eða vitir nú þegar hvernig er best að komast til
 	Íslands hvaðan sem þú gætir verið að koma.
 </h4>
 <br />
+
 <p>
 	Upplýsingar um flug, Keflavíkurflugvöll, Flybus, fríhöfnina og bílaleigur má
 	finna á enska hluta síðunnar.
 </p>
-
-<img src="../images/travel/iceland-map-annotated.jpeg" class="floatRight" />
 
 <p>
 	Það er möguleiki á að við munum leigja rútu og vera með sérstaka rútuferð inn
@@ -416,6 +420,7 @@
             </article><article id="section-byFoot" class="travel">
                 <header>Bónus - Gangandi</header>
                 
+<img src="../images/location/landmannalaugar-1.jpg" class="floatRight" />
 <h4>Fyrir göngugarpa er tilvalið að ganga til Þórsmerkur.</h4>
 <br />
 <p>
@@ -423,12 +428,12 @@
 	- <strong>Laugaveginn</strong> (3-4 daga ganga: 55 km) eða<br />
 	- <strong>Fimmvörðuhálsinn</strong> (1 dagur: 22 km)
 </p>
-
-<img src="../images/location/landmannalaugar-1.jpg" class="floatRight" />
+<img src="../images/location/landmannalaugar-0.jpg" class="floatLeft" />
 <h5>
 	Owen gekk Fimmvörðuhálsinn með Nönnu í fyrsta skipti sem hann kom til Íslands,
 	sem er ein aðalástæða þess að veislan er haldin hér.
 </h5>
+<br />
 
 <p>
 	Hægt er að láta senda búnað beint til Þórsmerkur (eins og t.d. tjald,
@@ -437,7 +442,6 @@
 	leiðinni. Hafið samband við Ferðafélag Íslands til að athuga með mögulega
 	skálagistingu.
 </p>
-<img src="../images/location/landmannalaugar-0.jpg" class="floatLeft" />
 
             </article><article id="section-bySea" class="travel">
                 <header>Lágkolefnisvalkostur - Á sjó</header>
@@ -455,14 +459,28 @@
             <div id="accommodationAnchor" class="navAnchor"></div><article id="section-accommodation" class="accommodation">
                 <header>Gistimátar</header>
                 
-<p>
-	Það eru engin 5 stjörnu hótel nálægt (eða nein hótel yfir höfuð). Það eru því
-	eingöngu 3 möguleikar fyrir gistingu: <ul>
-        <li><h5>Rúm inni í öðrum hvorum skálanum</h5></li>
-        <li><h5>Að mæta með eigin tjaldvagn</h5></li>
-        <li><h5>Tjald!</h5></li>
-</ul>
-</p>
+<h4 class="centerAlign">
+	Það eru engin 5 stjörnu hótel nálægt (eða nein hótel yfir höfuð).<br />
+	Það eru því eingöngu 3 möguleikar fyrir gistingu:
+</h4>
+
+<div class="trio-container">
+	<div class="trio">
+		<img src="../images/cabins/cabin-small.jpg" />
+		<h4>Rúm inni í öðrum hvorum skálanum</h4>
+	</div>
+
+	<div class="trio">
+		<img src="../images/campervan/campervan-cropped.jpeg" />
+		<h4>Að mæta með eigin tjaldvagn</h4>
+	</div>
+
+	<div class="trio">
+		<img src="../images/tents/tents-0.jpg" />
+		<h4>Tjald!</h4>
+	</div>
+</div>
+
 <!-- 
 <h4>
 	We've booked out both cabins for the entire weekend, so you'll have access to
@@ -541,10 +559,10 @@
                 
 <img src="../images/campervan/campervan.jpg" class="floatLeft" />
 
-<p>
+<h4>
 	Ef þú hefur aðgang að góðum fjórhjóladrifnum bíl og veigrar þér ekki við að
 	keyra yfir nokkrar hálendis ár, þá er hægt að koma með tjaldvagn með sér.
-</p>
+</h4>
 <p>
 	Þar sem ekki þarf að keyra yfir Krossá þá eru flestar árnar ekki dýpri en um 1
 	metri, en það getur að vísu breyst með vatnavöxtum eftir því hvort það hafi
@@ -568,7 +586,7 @@
                 
 <img class="floatRight" src="../images/tents/tents-0.jpg" />
 
-<p>Auðvelt er að setja upp tjald og gott tjaldsvæði er á staðnum.</p>
+<h4>Auðvelt er að setja upp tjald og gott tjaldsvæði er á staðnum.</h4>
 <p>
 	Hægt er að velja milli þess að tjalda í lítilli laut inni í skógi og sofna við
 	lækjarnið, eða tjalda á stóru opnu tjaldsvæði þar sem er nóg af bekkjum og
@@ -641,11 +659,11 @@
 	frekar með góðum gönguskóm eða þægilegum íþróttaskóm.
 </p>
 
-<p>
+<h5>
 	Það er aftur á móti alveg hægt að klæðast jakkafötum yfir föðurlandið (eins og
 	Owen mun vera klæddur), eða klæðast fallegum lopapeysum og hlýjum sokkabuxum
 	eins og íslenskir brúðkaupsgestir hafa gert árum saman.
-</p>
+</h5>
 
 <p>
 	Munið bara eftir að taka með ykkur mörg lög af fötum, það er þá hægt að
@@ -656,7 +674,7 @@
             </article><article id="clothing" class="whatToBring">
                 <header>Hvað þarf að koma með - Fyrir svefninn</header>
                 
-<img src="../images/what-to-wear/bed.jpg" class="floatLeft" />
+<img src="../images/what-to-wear/bed.jpg" class="floatRight" />
 <p>
 	<em>Sjá - Gistiaðstaða.</em>
 </p>
@@ -846,17 +864,17 @@
 
             </article></section>
 
-        <section id="rsvp">    
+        <section id="rsvp" class="centerAlign">    
             <div id="rsvpAnchor" class="navAnchor"></div><article id="section-rsvp" class="rsvp">
-                <header>RSVP</header>
+                <header>Svar óskast / RSVP</header>
                 
 <p>
 	Vinsamlegast látið okkur vita ef þið komist með að nota eftirfarandi Google
-	Form hlekk :
-	<button>
+	Form hlekk :<br />
+	<button class="bigButton">
 		<a
 			href="https://docs.google.com/forms/d/e/1FAIpQLSfn4WlQqnfGjmAWBRU-O0Gfw7cgSV_AbzRlKnMzv-FTbAaKFw/viewform?usp=sf_link"
-			><h3>Svar óskast / RSVP</h3></a
+			><h3>Ýtið hér</h3></a
 		>
 	</button>
 </p>

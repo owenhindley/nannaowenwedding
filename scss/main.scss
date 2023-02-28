@@ -68,7 +68,8 @@ body.is {
 }
 
 #splashVideo,
-#video-overlay {
+#video-overlay,
+#backgroundImage {
 	position: fixed;
 	top: 0px;
 	left: 0px;
@@ -111,9 +112,17 @@ body.is {
 	opacity: 1;
 }
 
+#backgroundImage {
+	background-image: url("../images/location/location-0.jpg");
+	background-position: center center;
+	background-size: cover;
+	opacity: 0;
+}
+
 @media (max-width: 1024px) {
 	#splashVideo,
-	#video-overlay {
+	#video-overlay,
+	#backgroundImage {
 		display: none;
 	}
 	.container {

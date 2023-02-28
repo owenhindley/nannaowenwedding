@@ -39,13 +39,18 @@
     var videoElement;
     document.addEventListener("DOMContentLoaded", function(){
         videoElement = document.getElementById('splashVideo');
+        backgroundImage = document.getElementById('backgroundImage');
         document.addEventListener('scroll', (e)=>{
             var opacity =  0.0;
-            if (window.scrollY < videoElement.offsetHeight) {
-                opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
-            }
-            opacity = Math.max(0.0, opacity);
-            videoElement.style.opacity = opacity;
+            opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
+            // if (window.scrollY < videoElement.offsetHeight) {
+                
+            // }
+            
+
+            videoElement.style.opacity =  Math.max(0.0, opacity);
+            // videoElement.style.display = opacity > 0.0 ? "block" : "none";
+            backgroundImage.style.opacity = Math.min(1.0, (1.0 - (opacity + 1.0))) * 0.2;
         });
 
         
@@ -69,11 +74,13 @@
           frameborder="0"
           height="100%"
           width="100%"
-          src="https://youtube.com/embed/mRX0DOXdOrI?autoplay=1&controls=0&showinfo=0&playsinline=1&mute=1&loop=1&rel=0&list=PLeeXFvKsxB3DWqhlaXKFydaWgwK1Pi6Sn"
+          src="https://youtube.com/embed/mRX0DOXdOrI?autoplay=1&controls=0&showinfo=0&playsinline=1&mute=1&loop=1&rel=0&list=PLeeXFvKsxB3DWqhlaXKFydaWgwK1Pi6Sn&enablejsapi=1"
         >
         </iframe>
       </div>
+    <div id="backgroundImage">
 
+    </div>
     <div id="video-overlay"></div>
 
     <div class="container">

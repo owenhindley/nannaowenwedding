@@ -39,13 +39,18 @@
     var videoElement;
     document.addEventListener("DOMContentLoaded", function(){
         videoElement = document.getElementById('splashVideo');
+        backgroundImage = document.getElementById('backgroundImage');
         document.addEventListener('scroll', (e)=>{
             var opacity =  0.0;
-            if (window.scrollY < videoElement.offsetHeight) {
-                opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
-            }
-            opacity = Math.max(0.0, opacity);
-            videoElement.style.opacity = opacity;
+            opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
+            // if (window.scrollY < videoElement.offsetHeight) {
+                
+            // }
+            
+
+            videoElement.style.opacity =  Math.max(0.0, opacity);
+            // videoElement.style.display = opacity > 0.0 ? "block" : "none";
+            backgroundImage.style.opacity = Math.min(1.0, (1.0 - (opacity + 1.0))) * 0.2;
         });
 
         
@@ -74,6 +79,9 @@
         </iframe>
       </div>
 
+      <div id="backgroundImage">
+
+      </div>
     <div id="video-overlay"></div>
 
     <div class="container">
@@ -101,10 +109,10 @@
                 <input type="radio" name="nav" id="check-schedule"></input>
                 <span><h6 class="is">Dagskrá</h6></span>
             </label>	
-            <label onclick="OnNavChange('rsvp')">
+            <!-- <label onclick="OnNavChange('rsvp')">
                 <input type="radio" name="nav" id="check-rsvp"></input>
                 <span><h6>RSVP</h6></span>
-            </label>
+            </label> -->
             <label onclick="document.location.href = document.location.href.replace('/is/', '/en/')">
                 <span><h6><img src="../images/flag-gb.svg" style="width:35px" alt="EN"/></h6></span>
             </label>
@@ -201,7 +209,7 @@
             {%- endfor -%}
         </section>
 
-        <section id="rsvp">    
+        <section id="rsvp" class="centerAlign">    
             <div id="rsvpAnchor" class="navAnchor"></div>    
             {%- for article in rsvp -%}            
             <article id="{{article.data.id}}" class="rsvp">

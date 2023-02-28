@@ -39,13 +39,18 @@
     var videoElement;
     document.addEventListener("DOMContentLoaded", function(){
         videoElement = document.getElementById('splashVideo');
+        backgroundImage = document.getElementById('backgroundImage');
         document.addEventListener('scroll', (e)=>{
             var opacity =  0.0;
-            if (window.scrollY < videoElement.offsetHeight) {
-                opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
-            }
-            opacity = Math.max(0.0, opacity);
-            videoElement.style.opacity = opacity;
+            opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
+            // if (window.scrollY < videoElement.offsetHeight) {
+                
+            // }
+            
+
+            videoElement.style.opacity =  Math.max(0.0, opacity);
+            // videoElement.style.display = opacity > 0.0 ? "block" : "none";
+            backgroundImage.style.opacity = Math.min(1.0, (1.0 - (opacity + 1.0))) * 0.2;
         });
 
         
@@ -69,11 +74,13 @@
           frameborder="0"
           height="100%"
           width="100%"
-          src="https://youtube.com/embed/mRX0DOXdOrI?autoplay=1&controls=0&showinfo=0&playsinline=1&mute=1&loop=1&rel=0&list=PLeeXFvKsxB3DWqhlaXKFydaWgwK1Pi6Sn"
+          src="https://youtube.com/embed/mRX0DOXdOrI?autoplay=1&controls=0&showinfo=0&playsinline=1&mute=1&loop=1&rel=0&list=PLeeXFvKsxB3DWqhlaXKFydaWgwK1Pi6Sn&enablejsapi=1"
         >
         </iframe>
       </div>
+    <div id="backgroundImage">
 
+    </div>
     <div id="video-overlay"></div>
 
     <div class="container">
@@ -144,18 +151,20 @@
         <section id="about">           
             <div id="aboutAnchor" class="navAnchor"></div><article id="what-where-when"  class="about">                
                 
-<div class="www-container">
-	<div class="www">
+<div class="trio-container">
+	<div class="trio">
 		<header>What</header>
-		<h5>
-			Nanna and Owen are getting married (again*)! </h5>
-			<p> And we want to celebrate with
-			you in one of our favourite places on earth!
-			</p>
-		<p>Please RSVP below 👇 to let us know if you can come<br/> by 1st April 2023</p>
+		<h5>Nanna and Owen are getting married (again*)!</h5>
+		<p>
+			And we want to celebrate with you in one of our favourite places on earth!
+		</p>
+		<p>
+			Please RSVP below 👇 to let us know if you can come<br />
+			by 1st April 2023
+		</p>
 	</div>
 
-	<div class="www">
+	<div class="trio">
 		<header>When</header>
 		<h5>25th - 27th August, 2023<br /></h5>
 		<br />
@@ -165,17 +174,17 @@
 		</p>
 	</div>
 
-	<div class="www">
+	<div class="trio">
 		<header>Where</header>
-		<h5>
-			Þórsmörk (Thors-merk)</h5>
-			<br/>
-			<p>A beautiful green valley on the South Coast of
-			Iceland, named after the guy with the long hair and a hammer.
-			</p>
+		<h5>Þórsmörk (Thors-merk)</h5>
+		<br />
+		<p>
+			A beautiful green valley on the South Coast of Iceland, named after the
+			guy with the long hair and a hammer.
+		</p>
 	</div>
 </div>
-<div class="www-buttons">
+<div class="trio-buttons">
 	<a
 		href="https://docs.google.com/forms/d/e/1FAIpQLSfn4WlQqnfGjmAWBRU-O0Gfw7cgSV_AbzRlKnMzv-FTbAaKFw/viewform?usp=sf_link"
 		target="_blank"
@@ -409,13 +418,14 @@
 	If you don't already live in Iceland, it's very likely you'll need to book a
 	ticket on a plane to get to our wedding.
 </h4>
+<img src="../images/travel/iceland-map-annotated.jpeg" class="floatRight" />
 <h5>
 	(because Iceland is surrounded by sea and quite a long way away from anything
 	else.)
 </h5>
 <br />
 
-<img src="../images/travel/iceland-map-annotated.jpeg" class="floatRight" />
+
 
 <p>
 	Keflavik is a small airport in the south-west of Iceland, and if you look out
@@ -423,26 +433,36 @@
 	Þórsmörk from above!
 </p>
 
-<h4>
-	From Keflavik Airport - it's a 4 hour drive with stops to the venue (3 hours
-	from Reykjavík).
-</h4>
+
+<h5>
+	We recommend arriving in Iceland on Thursday 24th if you can - to break up the
+	journey. 
+</h5>
 <p>
-	We highly recommend arriving on the Thursday at the latest to break up the
-	journey, spending a night in either Reykjavík, or Hvolsvöllur, and then
-	arriving at Básar on the Friday.
+	From the airport you can then spend the night in either Reykjavík or Hvolsvöllur, and then
+	arrive at Básar on the Friday. From Keflavik Airport it's a 4 hour drive with stops to the venue, and from Reykjavík it's about 3 hours.
 </p>
-<p>
+<h5>
 	We've arranged a discount for the Thursday night for a limited number of rooms
 	at
-	<a href="https://midgardbasecamp.is/" target="_blank">Midgard hostel</a> in Hvolsvöllur - you
+	<a href="https://midgardbasecamp.is/" target="_blank">Midgard hostel</a> in Hvolsvöllur</h5>
+	<p>You
 	can book directly with them <a href="mailto:sleep@midgard.is">by email</a>,
-	and by mentioning "Nanna & Owen's Wedding" you'll be able to get either :
-    <ul>
-        <li>Ensuite 4-person family room (8000isk / person)</li>
-            <li>Shared bathroom 4-person family room (7225isk / person)</li>
-            <li>Bed in a 6-person dorm (7500isk / person)</li>
-    </ul> 
+	and by mentioning "Nanna & Owen's Wedding" you'll be able to get :
+	<div class="trio-container">
+		<div class="trio">
+			<p>Ensuite 4-person family room (8000isk / person)</p>
+		</div>
+		<div class="trio">
+			<p>Shared bathroom 4-person family room (7225isk / person)</p>
+		</div>
+		<div class="trio">
+			<p>Bed in a 6-person dorm (7500isk / person)</p>
+		</div>
+	</div>
+
+</p>
+   
 </p>
 
 <h4>Once you've landed, your transport options are:</h4>
@@ -597,13 +617,29 @@
             <div id="accommodationAnchor" class="navAnchor"></div><article id="section-accommodation" class="accommodation">
                 <header>Accommodation + Facilities</header>
                 
-<p>
+<h4 class="centerAlign">
 	Being a stunningly remote location in the Highlands, there are no 5-star
-	hotels nearby. You'll have three main options for accommodation - a bed in one
-	of the two cabins, a campervan, or bringing your own tent.
-</p>
+	hotels nearby. <br />You'll have three main options for accommodation:
+</h4>
 
-<h4>
+<div class="trio-container">
+	<div class="trio">
+		<img src="../images/cabins/cabin-small.jpg" />
+		<h4>A bed in one of the two cabins</h4>
+	</div>
+
+	<div class="trio">
+		<img src="../images/campervan/campervan-cropped.jpeg" />
+		<h4>Bring a 4x4 campervan or sturdy caravan</h4>
+	</div>
+
+	<div class="trio">
+		<img src="../images/tents/tents-0.jpg" />
+		<h4>A tent!</h4>
+	</div>
+</div>
+
+<h4 class="centerAlign">
 	We've booked out both cabins for the entire weekend, so you'll have access to
 	everything mentioned below, even if you're not sleeping there.
 </h4>
@@ -733,10 +769,10 @@
                 
 <img class="floatRight" src="../images/tents/tents-0.jpg" />
 
-<p>
+<h4>
 	Tents are the simplest option, and camping in the woods at Þórsmörk is a great
 	experience.
-</p>
+</h4>
 <p>
 	You can find a nice secluded spot in the forest next to a river (to keep the
 	beer cool), or camp in one of the large, open spaces with benches and public
@@ -1042,16 +1078,17 @@
             <div id="rsvpAnchor" class="navAnchor"></div><article id="section-rsvp" class="rsvp">
                 <header>RSVP</header>
                 
-<p>
+<p class="centerAlign">
 	Please let us know if you can join us using the following Google Form :
-	<button>
+	<br />
+	<button class="bigButton">
 		<a
 			href="https://docs.google.com/forms/d/e/1FAIpQLSfn4WlQqnfGjmAWBRU-O0Gfw7cgSV_AbzRlKnMzv-FTbAaKFw/viewform?usp=sf_link"
-			><h3>Click here to RSVP</h3></a
+			><h3>Click here</h3></a
 		>
 	</button>
 </p>
-<p>
+<p class="centerAlign">
 	With any other questions, please message us or email
 	<a href="mailto:info@huldufugl.is">info@huldufugl.is</a> - which will go to
 	both of us.
