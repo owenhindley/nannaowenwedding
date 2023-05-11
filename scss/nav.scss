@@ -1,131 +1,134 @@
-@import './colours.scss';
+@import "./colours.scss";
 
 nav {
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    height: 10em;
-    margin-left: 0;
-    // margin-top: 3em;
-    margin-bottom: 3em;
-    text-align: center;
-    z-index: 10;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 10em;
+	margin-left: 0;
+	// margin-top: 3em;
+	margin-bottom: 3em;
+	text-align: center;
+	z-index: 10;
 
-    background-image: linear-gradient(
-        to top,
-        transparent 0%,
-        rgba(0, 0, 0, 0.2) 100%
-    );
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    opacity: 1;
+	background-image: linear-gradient(
+		to top,
+		transparent 0%,
+		rgba(0, 0, 0, 0.2) 100%
+	);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	opacity: 1;
 
-    #navInner {
-        margin-top: 1em;
+	#navInner {
+		margin-top: 1em;
 
-        label {
-            margin-right: 1em;
-            margin-left: 1em;
-            // margin-bottom: 0.5em;
+		label {
+			margin-right: 1em;
+			margin-left: 1em;
+			// margin-bottom: 0.5em;
 
-            height: 3em;
-            display: inline-block;
+			height: 3em;
+			display: inline-block;
 
-            span {
-                cursor: pointer;
+			span {
+				cursor: pointer;
 
-                h6 {
-                    padding: 0.2em 0.3em 0.1em 0.3em;
+				h6 {
+					padding: 0.2em 0.3em 0.1em 0.3em;
 
-                    border-radius: $borderRadius;
-                    color: black;
-                    // font-family: 'Josefin Sans';
-                    text-transform: uppercase;
-                    font-weight: bolder;
-                    font-size: 30px;
+					border-radius: $borderRadius;
+					color: black;
+					// font-family: 'Josefin Sans';
+					text-transform: uppercase;
+					font-weight: bolder;
+					font-size: 30px;
 
-                    cursor: pointer;
-                    transition: transform 0.2s;
+					cursor: pointer;
+					transition: transform 0.2s;
 
-                    &:hover {
-                        transform: scale(1.1);
-                    }
+					&:hover {
+						transform: scale(1.1);
+					}
 
-                    background-color: $cm;
-                    color: $textColorLight;
-                    text-shadow: 1px 1px $ca;
-                }
-            }
+					background-color: $cm;
+					color: $textColorLight;
+					text-shadow: 1px 1px $ca;
+				}
+			}
 
-            // &:nth-of-type(2n + 1) span h6 {
-            //     background-color: $ca;
-            //     color:$textColorLight;
-            //     text-shadow: 1px 1px $cm;
-            // }
-            // &:nth-of-type(4n + 2) span h6 {
-            //     background-color: $c2;
-            //     color:$c2_alt;
-            // }
-            // &:nth-of-type(4n + 3) span h6 {
-            //     background-color: $c3;
-            //     color:$c3_alt;
-            // }
+			// &:nth-of-type(2n + 1) span h6 {
+			//     background-color: $ca;
+			//     color:$textColorLight;
+			//     text-shadow: 1px 1px $cm;
+			// }
+			// &:nth-of-type(4n + 2) span h6 {
+			//     background-color: $c2;
+			//     color:$c2_alt;
+			// }
+			// &:nth-of-type(4n + 3) span h6 {
+			//     background-color: $c3;
+			//     color:$c3_alt;
+			// }
 
-            input {
-                appearance: none;
-                margin-left: -1em;
-            }
+			input {
+				appearance: none;
+				margin-left: -1em;
+			}
 
-            input:checked + span {
-                // background-color: $backgroundColor;
-                // border: 2px solid white;
-                // color: $textColor;
+			input:checked + span {
+				// background-color: $backgroundColor;
+				// border: 2px solid white;
+				// color: $textColor;
 
-                border-bottom: 2px solid white;
-            }
-        }
+				border-bottom: 2px solid white;
+			}
+		}
 
-        @media (max-width: 1024px) {
-            text-align: center;
+		@media (max-width: 1024px) {
+			text-align: center;
 
-            label {
-                height: 3em;
-                margin-left: auto;
-                margin-right: auto;
+			label {
+				height: 3em;
+				margin-left: auto;
+				margin-right: auto;
 
-                span {
-                    font-size: 24px;
-                }
-            }
-        }
-    }
+				span {
+					font-size: 24px;
+				}
+			}
+		}
+	}
 
-    @media (max-width: 1024px) {
-        width: 100vw;
-        background: black;
+	@media (max-width: 1024px) {
+		width: 100vw;
+		background: black;
 
-        #navInner {
-            clear: both;
-            margin: 0;
-            label {
-                height: 1.5em;
-                display: block;
-                span {
-                    font-size: 1em;
+		#navInner {
+			clear: both;
+			margin: 0;
+			label {
+				height: 1.5em;
+				display: block;
+				span {
+					font-size: 1em;
 
-                    background-color: transparent;
-                    color: $textColorLight;
+					background-color: transparent;
+					color: $textColorLight;
 
-                    h6 {
-                        font-size: 1em;
-                        background-color: transparent;
-                        padding: 0;
-                        position: relative;
-                        top: -1em;
-                    }
-                }
-            }
-        }
-    }
+					h6 {
+						font-size: 1em;
+						background-color: transparent;
+						padding: 0;
+						position: relative;
+						top: -1em;
+						&:has(img) {
+							top: 0.5em;
+						}
+					}
+				}
+			}
+		}
+	}
 }

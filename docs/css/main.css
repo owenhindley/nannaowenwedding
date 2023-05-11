@@ -227,7 +227,9 @@ nav {
               background-color: transparent;
               padding: 0;
               position: relative;
-              top: -1em; } }
+              top: -1em; }
+              nav #navInner label span h6:has(img) {
+                top: 0.5em; } }
 
 /* Color Theme Swatches in RGBA */
 /* Color Theme Swatches in Hex */
