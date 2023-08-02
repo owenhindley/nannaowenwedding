@@ -279,6 +279,16 @@ body .container > header {
     position: absolute;
     right: 0;
     text-align: right; }
+  body .container > header.small {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+    body .container > header.small img {
+      max-height: 200px;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem; }
 
 /* Color Theme Swatches in RGBA */
 /* Color Theme Swatches in Hex */
@@ -409,6 +419,10 @@ section {
       float: left; }
     section img.small {
       width: 40%; }
+    section img.smaller {
+      width: 30%; }
+    section img.overlay {
+      mix-blend-mode: multiply; }
   section .trio-container {
     width: 100%;
     overflow: hidden; }

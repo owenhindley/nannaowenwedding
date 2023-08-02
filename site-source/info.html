@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta charset="utf-8">
+<title>Nanna+Owen 2023</title>
+<meta name="description"
+	content="Nanna and Owen are getting married!">
+<meta name="author" content="Owen Hindley">
+<meta property="og:url" content="http://www.huldufugl.is/wedding/en/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nanna+Owen 2023">
+<meta property="og:description"
+	content="Nanna and Owen are getting married!">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nanna+Owen 2023">
+<meta name="twitter:description"
+	content="Nanna and Owen are getting married!">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.typekit.net/rda3kzc.css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" href="https://use.typekit.net/bio5jjx.css"> -->
+
+<link rel="stylesheet" href="../css/normalize.css">
+<link rel="stylesheet" href="../css/main.css">
+
+<script>
+	function OnNavChange(e){
+		document.querySelector('main').className = e;
+        location.hash = "#" + e + "Anchor";
+	}
+
+    var videoElement;
+    document.addEventListener("DOMContentLoaded", function(){
+        videoElement = document.getElementById('splashVideo');
+        backgroundImage = document.getElementById('backgroundImage');
+        document.addEventListener('scroll', (e)=>{
+            var opacity =  0.0;
+            opacity = (videoElement.offsetHeight - (window.scrollY * 4.0)) / videoElement.offsetHeight;
+            // if (window.scrollY < videoElement.offsetHeight) {
+                
+            // }
+            
+
+            videoElement.style.opacity =  Math.max(0.0, opacity);
+            // videoElement.style.display = opacity > 0.0 ? "block" : "none";
+            backgroundImage.style.opacity = Math.min(1.0, (1.0 - (opacity + 1.0))) * 0.2;
+        });
+
+        
+
+    });
+    
+   
+</script>
+
+
+
+<body class="en">
+
+   
+    <div id="backgroundImage" style="opacity: 0.5;">
+
+    </div>
+    <div id="video-overlay"></div>
+
+    <div class="container">
+  
+        <nav>       
+            <div id="navInner">
+                <label onclick="OnNavChange('schedule')">
+                    <input type="radio" name="nav" id="check-schedule"></input>
+                    <span><h6 class="en">Schedule</h6></span>
+                </label>	
+            <label onclick="OnNavChange('contact')">
+                <input type="radio" name="nav" id="check-contact"></input>
+                <span><h6 class="en">Contact</h6></span>
+            </label>
+            <label onclick="OnNavChange('map')">
+                <input type="radio" name="nav" id="check-map"></input>
+                <span><h6 class="en">Map</h6></span>
+            </label>		
+           
+            <label onclick="OnNavChange('travel')">
+                <input type="radio" name="nav" id="check-travel"></input>
+                <span><h6 class="en">Travel</h6></span>
+            </label>	
+            <label onclick="OnNavChange('what-to-bring')">
+                <input type="radio" name="nav" id="check-what-to-bring"></input>
+                <span><h6 class="en">What To Bring</h6></span>
+            </label>           
+        </div>		
+        </nav>
+
+    <header class="small">       
+        <img src="../images/title-en.png"/>        
+    </header>
+
+
+   
+
+    <main class="all">
+
+        {% assign contact = collections.info-contact | sort: 'data.order' | where : "data.type", "info"   %}
+        {% assign schedule = collections.info-schedule | sort: 'data.order' | where : "data.type", "info"   %}
+        {% assign map = collections.info-map | sort: 'data.order' | where : "data.type", "info"   %}
+        {% assign travel = collections.info-travel | sort: 'data.order' | where : "data.type", "info"   %}
+        {% assign whatToBring = collections.info-whatToBring | sort: 'data.order' | where : "data.type", "info"   %}
+        
+        <section>     
+            <div id="scheduleAnchor" class="navAnchor"></div>    
+            <header>Schedule</header>
+            {%- for article in schedule -%}            
+            <article id="{{article.data.id}}" class="schedule">
+                <h3>{{article.data.title}}</h3>
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+
+        <section id="contact">           
+            <div id="contactAnchor" class="navAnchor"></div>
+            <header>Useful Contact Numbers</header>
+            {%- for article in contact -%}            
+            <article id="{{article.data.id}}"  class="about">                
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+
+        </section>
+
+        <section id="map">           
+            <div id="mapAnchor" class="navAnchor"></div>
+            <header>Map</header>
+            {%- for article in map -%}            
+            <article id="{{article.data.id}}"  class="about">                
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+
+        </section>
+
+       
+
+        <section id="travel">      
+            <div id="travelAnchor" class="navAnchor"></div>
+            <header>Travel Info</header>
+            {%- for article in travel -%}            
+            <article id="{{article.data.id}}" class="travel">                
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+        
+
+        <section id="what-to-bring">         
+            <div id="what-to-bringAnchor" class="navAnchor"></div>
+            <header>What To Bring / Packing List</header>
+            {%- for article in whatToBring -%}            
+            <article id="{{article.data.id}}" class="whatToBring">                
+                {{ article.templateContent}}
+            </article>
+            {%- endfor -%}
+        </section>
+       
+
+    </main>
+    <footer>
+        <p>Nanna &amp; Owen, 2023</p>
+
+    </footer>
+
+</div>
+</body>
+
+ 

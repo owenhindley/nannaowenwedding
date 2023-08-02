@@ -127,6 +127,10 @@ section {
       float: left; }
     section img.small {
       width: 40%; }
+    section img.smaller {
+      width: 30%; }
+    section img.overlay {
+      mix-blend-mode: multiply; }
   section .trio-container {
     width: 100%;
     overflow: hidden; }

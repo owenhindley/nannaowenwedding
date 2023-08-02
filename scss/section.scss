@@ -155,6 +155,15 @@ section {
 		&.small {
 			width: 40%;
 		}
+
+		&.smaller {
+			width: 30%;
+		}
+
+		&.overlay {
+			mix-blend-mode: multiply;
+			
+		}
 	}
 
 	// what where when
