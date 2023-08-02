@@ -289,6 +289,14 @@ body .container > header {
       margin-left: auto;
       margin-right: auto;
       margin-top: 1rem; }
+    @media (max-width: 1024px) {
+      body .container > header.small {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background-image: none;
+        height: 6rem; }
+        body .container > header.small img {
+          display: none; } }
 
 /* Color Theme Swatches in RGBA */
 /* Color Theme Swatches in Hex */

@@ -55,5 +55,16 @@ body .container > header {
 
         margin-top: 2rem;
         margin-bottom: 2rem;
+
+
+        @media (max-width: 1024px) {
+            img {
+                display: none;
+            }
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            background-image: none;
+            height: 6rem;
+        }
     }
 }
